@@ -16,85 +16,126 @@
 
     <body>
         <input type="checkbox" id="logBtn" />
-        <input type="checkbox" id="rminimax">
-        <input type="checkbox" id="lminimax">
+        <input type="checkbox" id="rminimax" />
+        <input type="checkbox" id="lminimax" />
+        <input type="checkbox" id="menu_btn" />
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <header>
-            <div id="pgHeader" class="flx">
-                <div class="dspI _10pctML flb">
-                  <span id="logo"><a href="#" class="ytetxt">ucan</a></span>
+            <div id="pgHeader" class="flx"> 
+                <div class="flx">
+                    <span id="logo">
+                    <a href="#" class="ytetxt">ucan</a>
+                    </span>
+                <form id="srchForm" class="" action="#" id="srch_bar" enctype="application/x-www-form-urlencoded">
+                    <input type="text" name="srch">
+                    <input type="submit" value="Search">
+                </form>
                 </div>
-                <div class="menu-item flx11 _10pctML"><a href="#">Home</a></div>
+                
+                
+                <div class="flx">
+                    <div class="menu-item"><a href="#">Home</a></div>
 
-                <nav class="flx11 _10pctML">
-                    <div class="menu flx">
-                        <div class="menu-item"><a href="pgm.html">Codes</a>
-                            <div class="sub-menu">
-                                <div class="menu-item nflb"><a href="gnom.html">Genome</a></div>
-                                <div class="menu-item nflb"><a href="#">Web Design</a></div>
-                                <div class="menu-item nflb"><a href="#">Data Science</a></div>
-                                <div class="menu-item nflb"><a href="#">Machine Learning</a></div>
+                    <nav class="">
+                            <div class="ctrl_btn">
+                            <label for="menu_btn"> 
+                                <div class="icon_wrap">
+                                    <img src="/static/media/minimiza.jpg" alt="Menu"> 
+                                </div>
+                            </label>
                             </div>
-                        </div>
-                        <div class="menu-item"><a href="gnom.html">Sports</a></div>
-                        <div class="menu-item"><a href="music.html">Music</a></div>
-                        <div class="menu-item"><a href="art.html">Art</a></div>
-                    </div>
-                </nav>
-                <div class="log_btn  _10pctML flb">  
-                    <section>
-                        <div class="_10pctMR" id="log_Btn">
-                            <label for="logBtn"> 
-                                <img src="/static/media/usr_icon.png" class="logbtn"/> 
-                                <div class="stackTxt">Log In</div> 
-                        </label>
-                        </div>
-                        <form id="logForm" action="form/login" method="post">
-                            <div class="inp_rap">
-                                <label for="log_cont">Contact</label> <br/>
-                            <div class="">
-                            <input autocomplete="off" placeholder="Enter phone or email" id="log_cont" type="text" name="cont" value="" />
+                        <div class="menu">
+                            <div class="menu-item"><a href="pgm.html">Creativity</a>
+                                <div class="sub-menu">
+                                    <div class="menu-item"><a href="gnom.html">Architech</a></div>
+                                    <div class="menu-item"><a href="music.html">Fashion</a></div>
+                                    <div class="menu-item"><a href="music.html">Fine Arts</a></div>
+                                    <div class="menu-item"><a href="music.html">Music</a></div>
+                                </div>
                             </div>
-                        </div>
-                            <div class="inp_rap">
-                                <label for="log_passwd">Password</label> <br/> 
-                            <div class="">
-                                <input autocomplete="off" placeholder="Enter your password" id="log_passwd" type="password" name="pwd" value="" />
+                            <div class="menu-item"><a href="pgm.html">Coding</a>
+                                <div class="sub-menu">
+                                    <div class="menu-item"><a href="#">Web Design</a></div>
+                                    <div class="menu-item "><a href="#">Data Science</a></div>
+                                    <div class="menu-item"><a href="#">Machine Learning</a></div>
+                                </div>
                             </div>
-                            <div class="fsm"><a href="form/reset">Forgot password</a></div>
-                        </div>
-                            <div class="uiBtn btnBox">
-                            <input type="submit" value="Login" name="log" class="uiButton uiBtnColor smlbtn" />
-                            </div>  
-                        </form>
-                    </section>
-                </div>
-                 
+                            <div class="menu-item"><a href="pgm.html">Politics</a>
+                                <div class="sub-menu">
+                                    <div class="menu-item"><a href="#">US Election</a></div>
+                                    <div class="menu-item"><a href="#">Data Science</a></div>
+                                    <div class="menu-item"><a href="#">Machine Learning</a></div>
+                                </div>
+                            </div>
+                            <div class="menu-item"><a href="gnom.html">Sports</a></div>
+                            <div class="menu-item"><a href="gnom.html">Research</a></div>        
+                    </nav>
+                    <div id="" class="">  
+                        <section>
+                            <div id="log_btn">
+                                <label for="logBtn">
+                                    <div class="icon_wrap">
+                                        <img src="/static/media/usr_icon.png" class="logbtn"/> 
+                                    </div> 
+                                </label>
+                            </div>
+                            <div class="rel">
+                                <div id="logForm" class="hidden">
+                                    <form action="form/login" method="post">
+                                        <div class="inp_rap">
+                                            <label for="log_cont">Contact</label> <br/>
+                                        <div class="">
+                                        <input autocomplete="off" placeholder="Enter phone or email" id="log_cont" type="text" name="cont" value="" />
+                                        </div>
+                                        </div>
+                                        <div class="inp_rap">
+                                            <label for="log_passwd">Password</label> <br/> 
+                                        <div class="">
+                                            <input autocomplete="off" placeholder="Enter your password" id="log_passwd" type="password" name="pwd" value="" />
+                                        </div>
+                                        <div class="fsm"><a href="form/reset">Forgot password</a></div>
+                                        </div>
+                                        <div class="uiBtn btnBox">
+                                        <input type="submit" value="Login" name="log" class="uiButton uiBtnColor smlbtn" />
+                                        </div>  
+                                    </form>
+                                </div>
+                            </div>      
+                        </section>
+                    </div>      
+                </div> 
             </div>
         </header>
 
         <div id="globalContainer" class="qst_content clearview" role="main">
             <div class="gradient">
               <div class="gradientContent clearfix">
-                <aside class="column">
-                    <div class="navContent _18pxMT">
+                <aside class="rAside column">
+                    <div class="">
                         <div class="rel">
-                            <div class="ctrl_btn  _18pxMT">
-                            <label for="lminimax"> <img src="/static/media/minimiza.jpg" alt="sideOut"> </label>
-                            <label for="lminimax"> <img src="#" alt="sideIn"> </label>
+                            <div class="ctrl_btn fxd  _18pxMT">
+                            <label for="lminimax"> 
+                                <div class="icon_wrap">
+                                    <img src="/static/media/minimiza.jpg" alt="sideOut"> </label>
+                                </div>
+                            <label for="lminimax">
+                                <div class="icon_wrap">
+                                    <img src="#" alt="sideIn"> 
+                                </div>
+                            </label>
                         </div>
                         </div>
-                        <div id="reg_container">
+                        <div class="hidden">
                         <div class="pvl _18pxMT">
                             <div class="mbs _52lq fsl fwb fcb">
                             Create Account
                             </div>
                             <div class="moto">
                                 <strong>
-                                 Become a global asset from what you can give  
+                                 Become a global asset from what you can offer  
                                 </strong>
                             </div>
                         </div><br />
@@ -155,15 +196,14 @@
                 </aside>
 
                 <main class="column">
-                    <div id="qst" class="_20MT mlft _18pxMT">
-
-                    <div id="limlit" class=" _20MT">
+                    <div id="qst" class="">
+                    <div class="article">
                         <div class="mbs socials clearfix">
                             <nav class="column">
                                 <div class="clearview ">
                                     <div class="usr_nav">
                                         <div class="limelitImg _15pMR">
-                                            <a class="limelitImg" href="#"><img src="/static/media/mypix.JPEG" ></a>
+                                            <a class="limelitImg" href="#"><img src="static/media/mypix.JPEG" ></a>
                                         </div>
                                         <div class="socials">
                                             <a href="#"><img class="spotImg" src="#" alt="about"></a>
@@ -223,36 +263,67 @@
                                 </div>
                             </article>
                         </div>
-                        <aside class="socials">
-                            <span class="_5pxML stats_icon">
-                                <a href="#">
-                                    <span class="">22</span>
-                                    <img src="/static/media/ptfingert.jpg" />
-                                </a> 
-                            </span> 
-                            <span class="hdl_stats">  
-                                <a href="#">
-                                    <strong class="fsm fwb brkwd">Achieving a genetically modified food can be more easy than thought</strong>
-                                </a><br>
-                                <span>
-                                    <div class="socials">
-                                    <span class="stats"><a href="#">
-                                        <span class="stats_icon"> 
-                                            <span>32</span> <span><img src="#" /> <br />
-                                                <span class="fsm">Response
-                                        </span></span>
-                                    </span> </a></span>
-                                    <span class="stats"><a href="#">
-                                        <span class="stats_icon"> <span>32</span> 
-                                        <span><img src="/static/media/rxn.jpg" /> <br />
-                                            <span class="fsm">Reaction</span>
+                    </div>
+
+                    <div class="article">
+                        <div class="mbs socials clearfix">
+                            <nav class="column">
+                                <div class="clearview ">
+                                    <div class="usr_nav">
+                                        <div class="limelitImg _15pMR">
+                                            <a class="limelitImg" href="#"><img src="static/media/mypix.JPEG" ></a>
+                                        </div>
+                                        <div class="socials">
+                                            <a href="#"><img class="spotImg" src="#" alt="about"></a>
+                                            <a href="#"><img class="spotImg" src="#" alt="send msg" ></a>
+                                        </div>
+                                        <span class="usr_name">
+                                            <a href="#">
+                                                <strong class="fsb fwb brkwd">user&nbsp;name</strong>
+                                            </a>
                                         </span>
-                                        </span>
-                                    </a></span>
+                                        
                                     </div>
-                                </span>
-                            </span>
-                        </aside>
+                                </div>
+                            </nav>
+
+                            <article class="column">  
+                                <div class="_5pxMT">
+                                    <section>
+                                    <div class="article_text fsm">
+                                        <p>
+                                        Achieving this through cross pollination and/or breeding is limited by the
+                                        fact that pollination and cross breeding occurs only between same or closely related species.
+                                        Achieving this through cross pollination and/or breeding is limited by the fact that pollination
+                                        and cross breeding occurs only between same or closely related species.
+                                        </p>
+                                    </div>
+                                    </section>
+                                    <footer><div class="socials">
+                                        <span class="stats"><a href="#">
+                                            <span class="stats_icon"> <span>32</span> <span><img src="#" /> <br/> 
+                                                <span class="fsm">Like</span>
+                                            </span>
+                                        </span>
+                                        </a></span>
+                                        <span class="stats"><a href="#">
+                                        <span>
+                                            <span class="stats_icon"> <span>32</span> <span><img src="/static/media/coment.jpg" /> <br> <span class="fsm"> Comment
+                                            </span></span>
+                                        </span>
+                                        </span> </a></span>
+                                        <span class="stats"><a href="#">
+                                        <span>
+                                            <span class="stats_icon"> <span>32</span> <span><img src="/static/media/ref.jpg" /> <br> 
+                                                <span class="fsm"> Ref</span>
+                                            </span>
+                                        </span>
+                                        </span> </a></span>
+                                    </div>
+                                    </footer>
+                                </div>
+                            </article>
+                        </div>
                     </div>
                 </div>
                 </main>

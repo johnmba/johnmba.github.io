@@ -17,38 +17,77 @@ body{
   padding:0px 0 20px 0px;
   background:url(../images/body-background.png) #eae6d1
 }
+
+.rel{
+  position: relative;
+  margin: 5px;
+}
+
+#logo {
+  font-family:Georgia;
+  font-weight:bold;
+  font-size  :50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+img{
+  border:0;
+  -ms-interpolation-mode:bicubic
+}
+svg:not(:root){
+  overflow:hidden
+}
+figure{
+  margin:0
+}
 html,button,input,select,textarea{
   font-family:sans-serif
 }
 body{
   margin:0
 }
-aside{
-  margin:20px 0;
-}
-main{
-  width:590px;
-  padding:30px 30px 50px 30px;
 
+#log_Btn label{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.clearfix > aside, main{
-  margin-top:190px;
-  position:relative;
-  background:#fbfbfb;
-  border-radius:3px;
+
+.icon_wrap{
+  height: 35px;
+  cursor: pointer;
+}
+
+main{
+  box-sizing: border-box;
+  border:1px solid #e5e5e5;
+  border-width:1px 0;
+  padding:10px auto;
+  margin:0px;
+  max-width:600px
+}
+
+.rAside{
+  box-sizing: border-box;
   border:1px solid #cbcbcb;
-  box-shadow:0px 1px 2px rgba(0,0,0,0.09),inset 0px 0px 2px 2px rgba(255,255,255,0.5),inset 0 0 5px 5px rgba(255,255,255,0.4)
+  margin-top:43px;
+  margin-right: 10px;
+  background:linear-gradient(solid #cbcbcb #fbfbfb);
 }
+
 a:focus{
   outline:thin dotted
 }
+
 a:hover,a:active{
   outline:0
 }
 
 /* page head styles */
 #pgHeader{
-  padding:15px 20px 15px 20px;
+  padding:10px 20px 5px 20px;
   margin:0;
   position:fixed;
   top:0;
@@ -72,19 +111,27 @@ a:hover,a:active{
   display: none;
 }
 
+.menu .menu-item{
+  margin-right: 3%;
+}
+
 .menu-item{
-  width: 100px;
-  font-size: 25px;
+  max-width: 100px;
+  font-size: 1.5em;
   line-height: 30px;
 }
 
-.sub-menu .menu-item{
-  width: 100px;
+.menu{
+  min-width: 260px;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
 }
 
 .menu .menu-item:hover .sub-menu{
   display: block;
   position: absolute;
+  font-size: 0.5em;
   background: rgb(0, 100, 0);
 }
 
@@ -93,9 +140,20 @@ a:hover,a:active{
 }
 
 /* newly approved rules*/
-#limlit nav{
+.article nav{
   width: 30%;
   height: 95%;
+}
+
+.article{ 
+  box-sizing: border-box;
+  margin-top: 10px;
+  padding:10px; 
+  position:relative;
+  background:#fbfbfb;
+  border-radius:3px;
+  border:1px solid #cbcbcb;
+  box-shadow:0px 1px 2px rgba(0,0,0,0.09),inset 0px 0px 2px 2px rgba(255,255,255,0.5),inset 0 0 5px 5px rgba(255,255,255,0.4)
 }
 
 #reg_container{
@@ -107,21 +165,17 @@ a:hover,a:active{
 
 #qst{
   max-width: 600px;
+  margin-top:56px;
 }
 
-#limlit{
-  width: inherit;
-  max-height: 50vh;
-}
-
-#limlit article{
+.article article{
   width: 68%;
   height: 70%;
 }
 
 .limelitImg{
   width: 98%;
-  height: 75%;
+  height: 100%;
 }
 
 img, video{
@@ -139,7 +193,7 @@ a{
 }
 
 .article_text{
-  height: 30px;
+  max-height: 200px;
   overflow: hidden;
 }
 
@@ -172,6 +226,10 @@ margin-right: 15px;
   display: table;
 }
 
+.fxd{
+  position: fixed;
+}
+
 /* flex properties */
 
 .flb{
@@ -192,8 +250,11 @@ margin-right: 15px;
 
 .flx{
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.flxrap{
+  flex-flow: wrap;
 }
 
 /* NOTE: rules for fonts */
@@ -251,6 +312,10 @@ margin-right: 15px;
 
 ._10pctMR{
   margin-right: 10%;
+}
+
+._3pctML{
+  margin-left: 2%;
 }
 
 figure {
