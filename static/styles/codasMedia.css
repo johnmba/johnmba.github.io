@@ -17,6 +17,14 @@ article footer{
   margin: 0;
 }
 
+.nflx{
+  flex: 1 1;
+}
+
+.dflx{
+  flex: 1 2;
+}
+
 .hidden{
   max-height: 0px;
   max-width: 0px;
@@ -135,6 +143,23 @@ article footer{
     min-height:0px
   }
 
+  nav .ctrl_btn:hover .menu{
+    display: block;
+    min-width: 100px;
+    position: absolute;
+    font-size: 0.9em;
+    text-align: left;
+    overflow-x: unset;
+    background: rgb(0, 100, 0);
+  }
+
+  section #log_btn:hover #logForm{
+    display: block;
+    position: absolute;
+    font-size: 0.5em;
+    background: rgb(0, 100, 0);
+  }
+
   #logForm form{
     background-color: rgb(20, 150, 10);
     right: 10px;
@@ -146,10 +171,6 @@ article footer{
     margin-top:30px;
   }
 
-  ._3pctML {
-    margin-left: 30%;
-  }
-
   #logSectn {
     position: absolute;
     left: 85%;
@@ -159,14 +180,10 @@ article footer{
   #pgHeader{
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
 
-  .menu{
-    display: block;
-    min-width: 0;
-    max-height: 0;
-    overflow: hidden;
+  .menu, #logForm{
+    display: none;
   }
 
   nav .ctrl_btn{
@@ -174,18 +191,17 @@ article footer{
   }
 
   #pgHeader .flx{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 5px 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
 @media print, screen and (max-width: 480px){
   header{
-      position:relative;
-      padding:5px 0px;
-      min-height:0px
+    position:relative;
+    padding:5px 0px;
+    min-height:0px
   }
 
   #logForm form{
@@ -193,10 +209,6 @@ article footer{
     right: 10px;
     transition: max-height 1s ease-in-out;
     max-width: 150px;
-  }
-
-  ._3pctML {
-    margin-left: 30%;
   }
 
   #logSectn {
@@ -208,13 +220,6 @@ article footer{
   #pgHeader{
     display: inline-block;
     align-items: baseline;
-  }
-
-  .menu{
-    display: block;
-    min-width: 0;
-    max-height: 0;
-    overflow: hidden;
   }
 
   nav .ctrl_btn{
