@@ -25,6 +25,22 @@ article footer{
   flex: 1 2;
 }
 
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+
+.ttl{
+  margin-bottom: 5px;
+}
+
+header h1,section h1,footer h1{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+  -ms-text-overflow:ellipsis
+}
+
 .unhidden{
   position: fixed;
   right: 0px;
@@ -55,14 +71,6 @@ aside .ctrl_btn{
   #srch_inp{
       width: 65%;
       padding: 3px;
-  }
-  
-  header h1,section h1,footer h1{
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-      -o-text-overflow:ellipsis;
-      -ms-text-overflow:ellipsis
   }
   
   footer{
@@ -108,7 +116,7 @@ aside .ctrl_btn{
   }
   
   header h1{
-      font-size:32px;
+      font-size:18px;
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
@@ -133,6 +141,13 @@ aside .ctrl_btn{
 
   #regCont{
     background-color: lightgrey;
+  }
+
+  .rAside .hidden{
+    max-height: 0px;
+    max-width: 0px;
+    overflow: hidden;
+    transition: max-width 1s ease-in-out;
   }
 
   aside .ctrl_btn:hover .hidden{
@@ -176,7 +191,6 @@ aside .ctrl_btn{
     display: flex;
     align-items: center;
   }
-
 
   nav .ctrl_btn{
     display: inline;
