@@ -20,7 +20,6 @@ body{
 
 .rel{
   position: relative;
-  margin: 5px;
 }
 
 #logo {
@@ -56,7 +55,8 @@ body{
 }
 
 .icon_wrap{
-  height: 35px;
+  height: 30px;
+  width: 30px;
   cursor: pointer;
 }
 
@@ -72,8 +72,10 @@ main{
 .rAside{
   box-sizing: border-box;
   border:1px solid #cbcbcb;
-  margin-top:43px;
+  margin-top:18px;
   margin-right: 10px;
+  position: absolute;
+  z-index: 1000;
   background:linear-gradient(solid #cbcbcb #fbfbfb);
 }
 
@@ -168,12 +170,12 @@ a:hover,a:active{
 
 #qst{
   max-width: 600px;
-  margin-top:56px;
+  margin-top:60px;
 }
 
 .article article{
   width: 68%;
-  height: 70%;
+  height: 80%;
 }
 
 .limelitImg{
@@ -257,6 +259,7 @@ margin-right: 15px;
 .fcb {
   color: #333;
 }
+
 .fwn {
   font-weight: normal;
 }
@@ -285,17 +288,13 @@ margin-right: 15px;
   font-size: 12px;
 }
 
-.mvm {
+.mvm{
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .mrl{
   margin: 0 5px;
-}
-
-.bcolor{
-  color: green;
 }
 
 ._10pctML{

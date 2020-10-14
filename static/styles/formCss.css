@@ -240,9 +240,18 @@ input[type="text"], input[type="password"]{
   
   
   /* NOTE: reg form styles */
+
+#logForm{
+  position: absolute;
+  right: 0;
+  background-color: lightslategray;
+  transition: max-height 1s ease-in-out;
+  max-width: 150px;
+}
+
 #regForm{
     height: 100%;
-    background-color: skyblue;
+    background-color: lightslategray;
     filter: brightness(60%) contrast(90%);
 }
 

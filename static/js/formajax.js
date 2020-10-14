@@ -264,7 +264,7 @@ function checkcontact(user)
 const log_btn = document.getElementById('log_btn')
 const log_form = document.getElementById('logForm')
 log_btn.addEventListener('click', ()=>{
-	log_form.classList.remove('hidden');
-	log_form.classList.add('unhidden');
+	//log_form.classList.remove('hidden');
+	//log_form.classList.add('unhidden');
 	console.log(log_form)
 })
