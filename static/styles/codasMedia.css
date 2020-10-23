@@ -5,10 +5,6 @@
   width: 30px;
 }
 
-.ctrl_btn{
-  display: none;
-}
-
 .dspI{
   display: inline;
 }
@@ -49,20 +45,46 @@ header h1,section h1,footer h1{
   transition: max-height 1s ease-in-out;
 }
 
+label[for='lminimax'] .icon_wrap, label[for='menu-btn'] .icon_wrap{
+  display: none;
+}
+
 aside .ctrl_btn{
   display: inline-flex;
 }
 
 @media print, screen and (max-width: 1060px){
-  #logBtn:checked ~ section .logform{
-    display: block;
+
+  .menu{
+    max-width: 320px;
   }
 
-  .stackTxt{
-    display: inline;
-    font-size: 10px;
-    letter-spacing: 0.4px;
-    color: #fff;
+  #regCont{
+    background-color: lightgrey;
+  }
+
+  .rAside .hidden{
+    min-width: 0;
+    max-height: 0px;
+    max-width: 0px;
+    overflow: hidden;
+    transition: max-width 1s ease-in-out;
+  }
+
+  aside .ctrl_btn:hover .hidden{
+    display: block;
+    max-height: 1000px;
+    max-width: 280px;
+    transition: max-width 1s ease-in-out;
+  }
+
+  .ctrl_btn{
+      display: inline;
+      z-index: 1000;
+  }
+
+  label[for='lminimax'] .icon_wrap{
+    display: block;
   }
 
   #srchForm{
@@ -83,23 +105,50 @@ aside .ctrl_btn{
   }
 }
 
-@media print, screen and (max-width: 910px){
+@media print, screen and (max-width: 930px){
 
   #pgHeader{
     padding: 0;
   }
 
-  .ctrl_btn{
-      display: inline;
-      z-index: 1000;
+  ._5pad{
+    padding-top: 10px;
   }
 
-  nav .ctrl_btn{
-    display: none;
+  #pgHeader{
+    display: inline-block;
+    align-items: baseline;
+  }
+  #pgHeader .flx{
+   display: flex;
+   align-items: center;
+   margin: 10px 5px 10px;
   }
 
   .pgHed{
       display: block;
+  }
+
+  .rAside{
+    margin-top: 82px;
+  }
+
+  #qst{
+    margin-top: 90px;
+  }
+
+  .rAside .ctrl_btn{
+    position: fixed;
+  }
+
+  #logSectn {
+    position: absolute;
+    left: 85%;
+    top: 58%
+  }
+
+  nav .ctrl_btn{
+    display: inline;
   }
 
   #srchForm form{
@@ -125,12 +174,7 @@ aside .ctrl_btn{
   }
 }
 
-@media print, screen and (max-width: 720px){
-  header{
-    position:relative;
-    padding:5px 0px;
-    min-height:0px
-  }
+@media print, screen and (max-width: 800px){
 
   .hidden{
     max-height: 0px;
@@ -139,41 +183,8 @@ aside .ctrl_btn{
     transition: max-height 1s ease-in-out;
   }
 
-  #regCont{
-    background-color: lightgrey;
-  }
-
-  .rAside .hidden{
-    max-height: 0px;
-    max-width: 0px;
-    overflow: hidden;
-    transition: max-width 1s ease-in-out;
-  }
-
-  aside .ctrl_btn:hover .hidden{
+  label[for='menu-btn'] .icon_wrap{
     display: block;
-    max-height: 1000px;
-    max-width: 280px;
-    transition: max-width 1s ease-in-out;
-  }
-
-  #qst{
-    margin-top: 27px;
-  }
-
-  nav .menu{
-    display: block;
-    position: absolute;
-    min-width: 120px;
-    font-size: 0.9em;
-    text-align: left;
-    overflow-x: unset;
-    background: lightslategray;
-  }
-
-  nav .ctrl_btn:hover .hidden{
-    max-height: 1000px;
-    transition: max-height 1s ease-in-out;
   }
 
   section #log_btn:hover .hidden{
@@ -181,29 +192,9 @@ aside .ctrl_btn{
     transition: max-height 1s ease-in-out;
   }
 
-  #logSectn {
-    position: absolute;
-    left: 85%;
-    top: 58%
-  }
-
-  #pgHeader{
-    display: flex;
-    align-items: center;
-  }
-
-  nav .ctrl_btn{
-    display: inline;
-  }
-
-  #pgHeader .flx{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
 }
 
-@media print, screen and (max-width: 480px){
+@media print, screen and (max-width: 630px){
   header{
     position:relative;
     padding:5px 0px;
@@ -211,32 +202,25 @@ aside .ctrl_btn{
   }
 
   .rAside{
-    margin-top: 47px;
+    margin-top: 56px;
   }
 
   #qst{
-    margin-top: 60px;
-  }
-
-  #logSectn {
-    position: absolute;
-    left: 85%;
-    top: 58%
-  }
-
-  #pgHeader{
-    display: inline-block;
-    align-items: baseline;
+    margin-top: 0;
   }
 
   nav .ctrl_btn{
     display: inline;
   }
+  
+  #pgHeader{
+    display: inline-block;
+    align-items: baseline;
+  }
 
   #pgHeader .flx{
    display: flex;
    align-items: center;
-   justify-content: space-between;
    margin: 5px 3px;
   }
 
@@ -244,6 +228,17 @@ aside .ctrl_btn{
       display:none
   }
 }
+
+@media print, screen and (max-width: 520px){
+  .menu {
+    max-width: 250px;
+  }
+
+  .logSectn{
+    right: 0px;;
+  }
+}
+
 @media print{
   body{
       padding:0.4in;

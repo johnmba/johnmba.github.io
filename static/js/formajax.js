@@ -154,7 +154,7 @@ function checkInput(input, validator){
 		input.setCustomValidity('');
 	} else {
 		var msg = Validate.getInvalids();
-		setCustomValidity(msg);
+		input.setCustomValidity(msg);
 	}
 };
 
@@ -175,16 +175,17 @@ regCheck.forEach(input => {
 //ajax submit form
 submit.addEventListener('click', function(e){
 	e.preventDefault();
-	error = [];
+	var error = [];
 	regCheck.forEach(input => {
 		checkInput(input[0], input[1])
 		error.push(Validate.invalids)
-		error.update()
 	})
 	if(error == ''){
 		$('form #regForm').removeClass().addClass('processing').html('Processing...').fadeIn('fast');									
 		var formData = inputs.serialize();
 		submitForm(formData);
+	}else{
+		console.log(error)
 	}
 })
 
