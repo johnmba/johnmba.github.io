@@ -1,381 +1,72 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
+
+<html>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Home</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./static/styles/codasNo.css">
-        <link rel="stylesheet" href="./static/styles/codasMedia.css">
-        <link rel="stylesheet" href="./static/styles/formCss.css">
+        <link rel="stylesheet" href="src/styles/generalStyle.css">
+        <link rel="stylesheet" href="src/styles/mediaCss.css">
     </head>
 
     <body>
-        <input type="checkbox" id="logBtn" />
-        <input type="checkbox" id="rminimax" />
-        <input type="checkbox" id="lminimax" />
-        <input type="checkbox" id="menu_btn" />
-        <!--[if lt IE 7]>
+        <!--<input type="checkbox" id="menu_btn" />
+        [if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <header>
-            <div id="pgHeader" class="flx nflx"> 
-                <div class="flx">
-                    <span id="logo">
-                        <a href="#" class="ytetxt">ucan</a>
-                    </span>
-                <form id="srchForm" class="" action="#" id="srch_bar" enctype="application/x-www-form-urlencoded">
-                    <input type="text" name="srch" />
-                    <input type="submit" value="Search" />
-                </form>
+            <div class="pgHeader" role="navigation"> 
+                                          
+                <div class="menu-wrapper">
+                    <div id="home-margin" class="menu-item">
+                        <a href="#">Home</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="pages/prof.html">Profile</a>
+                        <div class="sub-menu">
+                            <div class="._10mt menu-item">
+                                <a href="acads.html">Academics</a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="skills.html">Skills</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <a href="abt.html">About</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="cont.html">Contact</a>
+                    </div> 
+                </div>   
+            
+                <div id="brand">
+                    <a href="#" class="">JOHN MBA</a>
                 </div>
-                         
-                <div class="flx _5pad dflx _5pctML">
-                    <div class="menu-item _3pctML"><a href="#">Home</a></div>
-
-                    <nav class="_3pctML">
-                        
-                        <div class="menu">
-                            <div class="menu-item"><a href="pgm.html">Creativity</a>
-                                <div class="sub-menu">
-                                    <div class="menu-item"><a href="gnom.html">Architech</a></div>
-                                    <div class="menu-item"><a href="music.html">Fashion</a></div>
-                                    <div class="menu-item"><a href="music.html">Fine Arts</a></div>
-                                    <div class="menu-item"><a href="music.html">Music</a></div>
-                                </div>
-                            </div>
-                            <div class="menu-item"><a href="pgm.html">Coding</a>
-                                <div class="sub-menu">
-                                    <div class="menu-item"><a href="#">Web Design</a></div>
-                                    <div class="menu-item "><a href="#">Data Science</a></div>
-                                    <div class="menu-item"><a href="#">Machine Learning</a></div>
-                                </div>
-                            </div>
-                            <div class="menu-item"><a href="pgm.html">Politics</a>
-                                <div class="sub-menu">
-                                    <div class="menu-item"><a href="#">US Election</a></div>
-                                    <div class="menu-item"><a href="#">Nigerians Protests</a></div>
-                                    <div class="menu-item"><a href="#">Machine Learning</a></div>
-                                </div>
-                            </div>
-                            <div class="menu-item"><a href="gnom.html">Sports</a></div>
-                            <div class="menu-item"><a href="gnom.html">Research</a></div> 
-                        </div>   
-                    </nav>
-                    <div id="" class="logSectn">  
-                        <section>
-                            <div id="log_btn" class="rel">
-                                <label for="logBtn">
-                                    <div class="icon_wrap">
-                                        <img src="/static/media/usr_icon.png" class="logbtn"/>
-                                    </div> 
-                                    <div class="ico_txt ytxt _5MT">Login</div> 
-                                </label>
-                
-                                <div id="logForm" class="hidden">
-                                    <form action="form/login" method="post">
-                                        <div class="inp_rap">
-                                            <label for="log_cont">Contact</label> <br/>
-                                        <div class="">
-                                        <input autocomplete="off" placeholder="Enter phone or email" id="log_cont" type="text" name="cont" value="" />
-                                        </div>
-                                        </div>
-                                        <div class="inp_rap">
-                                            <label for="log_passwd">Password</label> <br/> 
-                                            <div class="">
-                                                <input autocomplete="off" placeholder="Enter your password" id="log_passwd" type="password" name="pwd" value="" />
-                                            </div>
-                                            <div class="info"><a href="form/reset">Reset password</a></div>
-                                        </div>
-                                        <div class="uiBtn btnBox">
-                                        <input type="submit" value="Login" name="log" class="uiButton uiBtnColor smlbtn" />
-                                        </div>  
-                                        <div class="fsm accBtn">Create an account</div>
-                                    </form>
-                                </div>
-                            </div>     
-                        </section>
-                    </div>      
-                </div> 
             </div>
         </header>
 
-        <div id="globalContainer" class="qst_content clearview" role="main">
-            <div class="gradient">
-                <div class="gradientContent clearfix">
-                    <aside class="rAside column">
-                        <div class="rel">
-                            <div class="ctrl_btn">
-                                <div id="regCont" class="hidden">                                   
-                                    <div class="pvl">
-                                        <div class="mbs _52lq fsl fwb fcb">
-                                            Create Account
-                                        </div>
-                                        <div class="moto">
-                                            <strong>
-                                            Become a global asset from what you can offer  
-                                            </strong>
-                                        </div>
-                                    </div>
-
-                                    <div class="asideForm clearview">
-                                        <form id="regForm" action="form/reg" method="post" onsubmit="return false">
-                                            <div class="inp_rap _10pxM">
-                                                <label for="fname">Name<br />
-                                                    <input minlength="3" class="regInp" autocomplete="off" placeholder="Enter first name" type="text" name="fn" id="fname" value="">
-                                                    <ul class="input_req fsm">
-                                                        <li>At least three characters and must be alphabets and numbers</li>
-                                                        <li>name can be one or two names separated by space</li>
-                                                    </ul>
-                                                </label>
-                                            </div>
-                                            <div class="inp_rap _10pxM">
-                                                <label for="lname">Surname<br />
-                                                    <input minlength="3" class="regInp" autocomplete="off" placeholder="Enter surname name" type="text" name="fn" id="lname" value="">
-                                                    <ul class="input_req fsm">
-                                                        <li>this can only be a single name without space</li>
-                                                        <li>name can be one or two names separated by space</li>
-                                                    </ul>
-                                                </label>
-                                            </div>
-                                            <div class="inp_rap _10pxM">
-                                                <label for="reg_cont">Contact<br />
-                                                    <input minlength="8" maxlength="32" class="regInp" autocomplete="off" placeholder="Enter your email or phone number" type="text" name="fn" id="reg_cont" value="">
-                                                    <ul class="input_req fsm">
-                                                        <li>It can either start with number or alphabet</li>
-                                                        <li>starts with either numbers or alphabets or alphabets with numbers</li>
-                                                        <li>contain at least one @ and end with dot(.) followed by at least 2 alphabets or just numbers</li>
-                                                        <li>It can either be phone number or E-mail</li>
-                                                    </ul>
-                                                </label>
-                                            </div>
-                                            <div class="inp_rap">
-                                                <label for="reg_pwd">Password <br />
-                                                    <input minlength="6" maxlength="16" class="regInp" autocomplete="off" placeholder="Enter a new password" type="password" name="pwd" id="reg_pwd" value="">
-                                                    <ul class="input_req fsm">
-                                                        <li>At least 8 character long but less than 100 characters</li>
-                                                        <li>contain at least one number</li>
-                                                        <li>contain at least one lowercase and uppercase alphabet</li>
-                                                        <li>contain a special character (e.g: #, @, !)</li>
-                                                    </ul>
-                                                </label>
-                                            </div>
-                                            <div class="fsm fcg fwn mrl">
-                                                <input type="checkbox" value="1"> I accept the <a class="fsm fwn bcolor" href="#" target="_blank" rel="nofollow">Privacy policy</a>,
-                                                <a class="fsm fwn bcolor" href="#" target="_blank" rel="nofollow">Terms of service</a> and <a class="fsm fwn bcolor" href="#" target="_blank" rel="nofollow">Cookie policy</a>
-                                            </div>
-
-                                            <div class="btnFonSiz btnBox">
-                                                <button type="submit" name="reg" class="btnGrad btnFonFam uiButton uiBtnColor btnText btnSize  highPad">Register</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <label for="lminimax"> 
-                                    <div class="icon_wrap">
-                                        <img src="/static/media/minimiza.jpg" alt="sideOut">
-                                        <div class="ico_txt">Register</div>
-                                    </div> 
-                                </label>
-                            </div>
-                        </div>
-
-                    </aside>
-
-                    <main class="column">
-                        <div id="qst" class="">
-                            <div class="article">
-                                <div class="mbs socials clearfix">
-                                    <nav class="column">
-                                        <div class="clearview ">
-                                            <div class="usr_nav">
-                                                <div class="limelitImg _15pMR">
-                                                    <a class="limelitImg" href="#"><img src="static/media/mypix.JPEG" ></a>
-                                                </div>
-                                                <div class="socials">
-                                                    <a href="#"><img class="spotImg" src="#" alt="about"></a>
-                                                    <a href="#"><img class="spotImg" src="#" alt="send msg" ></a>
-                                                </div>
-                                                <span class="usr_name">
-                                                    <a href="#">
-                                                        <strong class="fsb fwb brkwd">user&nbsp;name</strong>
-                                                    </a>
-                                                </span>
-                                                
-                                            </div>
-                                        </div>
-                                    </nav>
-
-                                    <article class="column">  
-                                        <div class="_5pxMT">
-                                            <header class="ttl">
-                                                <h1>
-                                                    <a href="#">the tittle of the article, click to read in full</a>
-                                                </h1>
-                                            </header>
-                                            <figure>
-                                                <div class="media">
-                                                    <video class="tmp" controls>
-                                                        <source src="/static/media/vidtest.mp4" type="video/mp4">
-                                                    </video>
-                                                </div>
-                                            </figure>
-
-                                            <section>
-                                                <div class="article_text fsm">
-                                                    <p>
-                                                    Achieving this through cross pollination and/or breeding is limited by the
-                                                    fact that pollination and cross breeding occurs only between same or closely related species.
-                                                    Achieving this through cross pollination and/or breeding is limited by the fact that pollination
-                                                    and cross breeding occurs only between same or closely related species.
-                                                    </p>
-                                                </div>
-                                            </section>
-
-                                            <footer><div class="socials">
-                                                <div class="stats">
-                                                    <a href="#">                                     
-                                                        <div class="icon_wrap">
-                                                            <img src="/static/media/plus.png" />
-                                                        </div>
-                                                    </a>
-                                                    <a href="#">
-                                                        <div class="fsm">
-                                                            <span>32</span> 
-                                                            <span class="stat_txt">Adds</span>
-                                                        </div>
-                                                    </a>          
-                                                     
-                                                </div>
-                                                <div class="stats">
-                                                    <a href="#">                                     
-                                                        <div class="icon_wrap">
-                                                            <img src="/static/media/rxn.jpg" />
-                                                        </div>
-                                                    </a>
-                                                    <a href="#">
-                                                        <div class="fsm">
-                                                            <span>32</span> 
-                                                            <span class="stat_txt">Expressions</span>
-                                                        </div>
-                                                    </a>    
-                                                </div>
-
-                                                <div class="stats">
-                                                    <a href="#">                                     
-                                                        <div class="icon_wrap">
-                                                            <img src="/static/media/ref.jpg" />
-                                                        </div>
-                                                    </a>
-                                                    <a href="#">
-                                                        <div class="fsm">
-                                                            <span>32</span> 
-                                                            <span class="stat_txt">References</span>
-                                                        </div>
-                                                    </a>     
-                                                </div>
-                                            </div>
-                                            </footer>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-
-                            <div class="article">
-                                <div class="mbs socials clearfix">
-                                    <nav class="column">
-                                        <div class="clearview ">
-                                            <div class="usr_nav">
-                                                <div class="limelitImg _15pMR">
-                                                    <a class="limelitImg" href="#">
-                                                        <img src="static/media/mypix.JPEG" >
-                                                    </a>
-                                                </div>
-                                                <div class="socials">
-                                                    <a href="#"><img class="spotImg" src="#" alt="about"></a>
-                                                    <a href="#"><img class="spotImg" src="#" alt="send msg" ></a>
-                                                </div>
-                                                <span class="usr_name">
-                                                    <a href="#">
-                                                        <strong class="fsb fwb brkwd">
-                                                            user&nbsp;name
-                                                        </strong>
-                                                    </a>
-                                                </span>
-                                                
-                                            </div>
-                                        </div>
-                                    </nav>
-        
-                                    <article class="column">  
-                                        <div class="_5pxMT">
-                                            <header class="ttl">
-                                                <h1>
-                                                    <a href="#">the tittle of the article, click to read in full</a>
-                                                </h1>
-                                            </header>
-                                            <section>
-                                                <div class="article_text fsm">
-                                                    <p>
-                                                    Achieving this through cross pollination and/or breeding is limited by the
-                                                    fact that pollination and cross breeding occurs only between same or closely related species.
-                                                    Achieving this through cross pollination and/or breeding is limited by the fact that pollination
-                                                    and cross breeding occurs only between same or closely related species.
-                                                    </p>
-                                                </div>
-                                            </section>
-
-                                            <footer>
-                                                <div class="socials">
-                                                    <span class="stats"><a href="#">
-                                                        <span class="stats_icon"> 
-                                                            <span>32</span> 
-                                                            <span><img src="/static/media/like.jpg" /> <br/> 
-                                                            <span class="fsm">Like</span>
-                                                        </span>
-                                                    </span>
-                                                    </a></span>
-                                                    <span class="stats"><a href="#">
-                                                    <span>
-                                                        <span class="stats_icon"> 
-                                                            <span>32</span> 
-                                                            <span><img src="/static/media/coment.jpg" /> <br> <span class="fsm"> Comment
-                                                        </span></span>
-                                                    </span>
-                                                    </span> </a></span>
-                                                    <span class="stats"><a href="#">
-                                                    <span>
-                                                        <span class="stats_icon"> 
-                                                            <span>32</span> 
-                                                            <span><img src="/static/media/ref.jpg" /> <br> 
-                                                            <span class="fsm"> Ref</span>
-                                                        </span>
-                                                    </span>
-                                                    </span> </a></span>
-                                                </div>
-                                            </footer>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-
-                        </div>
-                    </main>
-
+        <main>
+            <div id="pgBackground" class="clearfix">
+                <div class="prof-img">
+                    <img src="build/images/bgpix.jpg" />
+                </div>
+                <div class="gradient">
+                    <h1> At A Glance</h1>
+                    <div class="content">
+                        <p>
+                            I am a certified biochemist as a graduate and a certified UK project management professional(P.M.P.) as well as Health and Safety Executive(H.S.E.) as a postgraduate. Skillfully I am professional website developer with strong desire for knowledge, hence improve and advancing on  my skill with every opportunity.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </main>
 
         <footer>
             <div class="relP">
                 <div id="pgfoot">
-                    <a href="#">Contact us</a>
-                    <span>Copy right 2020</span>
+                    This is one of the things i can do in programming with ease; if you need a portfolio site like this, email me at nwanjamba@gmail.com or use the contact page for more option
                 </div>
             </div>
         </footer>      

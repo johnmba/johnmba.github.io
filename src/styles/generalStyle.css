@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#brand{
+    margin: 3px;
+}
+
+#brand a{
+    color: green;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.pgHeader{
+    padding: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.menu-wrapper{
+    display: flex;
+}
+
+.menu-wrapper > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+#home-margin{
+    margin-right: 50px;
+  }
+
+.menu-item{
+    height: 22px;
+    margin-top: 3px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.menu-item a{
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.menu-item:hover{
+    border-bottom: 1px solid black;
+}
+
+.menu-item a:hover{
+    color: black;
+}
+
+.sub-menu{
+    display: none;
+}
+
+.menu-wrapper .menu-item:hover .sub-menu{
+    display: block;
+    position: absolute;
+    max-width: 100px;
+    margin-top: 0px;
+}
+
+.menu .menu-item:hover .sub-menu .menu-item{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+  }
+  
+  .menu .menu-item:hover .sub-menu .menu-item:last-child{
+    border-bottom: none;
+  }
+  
+  .menu .menu-item:hover .sub-menu .menu-item a:hover{
+    color: #0e385f;
+  }
+
+/*profile style*/
+
+#pgBackground{
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.gradient{
+    padding: 30px;
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );
+}
+
+.prof-img img{
+    width: 100%;
+}
