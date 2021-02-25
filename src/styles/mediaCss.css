@@ -17,11 +17,11 @@
       max-height: 70%;
     }
 
-    #pgBackground{
+    .img-background{
       background-image: url(/build/images/bgpix.jpg);
-      background-position:  center;
-      background-repeat: no-repeat;
-      background-size: cover;
+    }
+
+    #pgBackground{
       display: block;
       width: 100vw;
       height: 90vh;
