@@ -19,6 +19,11 @@ ul{
   list-style: none
 }
 
+#pgBackground{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 ._10pad{
   padding: 10px;
 }
@@ -26,18 +31,9 @@ ul{
 /* NAV HEADER
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-#brand{
-  margin: 3px;
-}
-
-#brand a{
-  color: green;
-  text-decoration: none;
-  transition: color 0.5s;
-}
-
 .pgHeader{
-  padding: 38px;
+  padding: 30px;
+  margin: 0 5rem;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -45,6 +41,38 @@ ul{
 
 .menu-wrapper{
   display: flex;
+}
+
+#brand-name{
+  margin: 3px;
+}
+
+#brand-name a{
+  color: green;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+.brand .menu-item{
+  margin-right: 55px;
+}
+#brand-name{
+  position: absolute;
+  top: 15px;
+  right: 2rem;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid green;
+}
+#brand-name > a{
+  margin-top: 3px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-wrapper > div {
@@ -85,194 +113,4 @@ ul{
 .active-link a{
   color: black !important;
 }
-
-/* PORTFOLIO
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.logo-wrapper img{
-  width: 100px;
-}
-
-.portfolio-item-wrapper{
-  position: relative;
-}
-
-.portfolio-item-wrapper .background-img-ppt{
-  height: 420px;
-}
-
-.background-img-ppt{
-  width: 100%;
-  background-position:  center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.portfolio-item {
-  position: absolute;
-    height: 100%;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.portfolio-item .slider{
-  align-items: center;
-}
-
-.portfolio-item .img-text-wrapper{
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
-.article-text{
-  max-height: 100%;
-  overflow: hidden;
-  padding-left: 10px;
-  padding-right: 10px;
-  flex-direction: column;
-}
-
-.portfolio-item-wrapper:hover .subtitle-text{
-  font-weight: 600;
-  color: seagreen;
-}
-
-
-/* PORTFOLIO
-  –––––––––––––––––––––––––––––––––––––––––––––––––– 
-
-.img-text-wrapper .subtitle-text{
-  transition: 1s;
-  font-weight: 600;
-  color: transparent; 
-}
-
-.bg-darken{
-  transition: 1s;
-  filter: brightness(20%);
-}*/
-
-/* ABOUT PAGE
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-  #pgBackground{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .prof-img img{
-    width: 100%;
-  }  
-  
-  .img-background{
-    background-image: url(/build/images/beach.jpg);
-  }
-
-  .profile-wrapper .slider{
-    background: white;
-    background: linear-gradient(to right bottom, 
-    rgba(255, 255, 255, 0.6),
-    rgba(225, 225, 255, 0.3)
-  );
-  border-radius: 2rem;
-  z-index: 2;
-  backdrop-filter: brightness(1.5rem);
-  }
-
-  .profile-wrapper .gradient-item{
-    display: flex;
-    flex-direction: column;
-    height: inherit;
-    overflow: hidden;
-    margin: 5px 10px 40px;
-    padding: 30px;
-  }
-  .profile-wrapper .gradient-item:nth-child(4){
-    padding-top: 0px;
-  }
-
-  .profile-wrapper{
-    position: relative;
-    max-height: 100%;
-    overflow: hidden;
-  }
-
-  .skil-icon img{
-    width: 50px;
-    height: 50px;
-  }
-
-  .cert-item{
-    position: relative;
-    padding-left: 25px;
-  }
-
-  .cert-item + .cert-item{
-    margin-top: 15px;
-  }
-
-  .cert-item::before{
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: transparent #fff;
-    border-width: 5px 0 5px 12px;
-    transform: translateY(-50%);
-}
-
-.skill{
-  display: flex;
-  background: linear-gradient(
-    to left top,
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.5)
-  );
-  border-radius: 1rem;
-  padding: 0.5rem;
-  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
-  justify-content: space-between;
-}
-
-.skill-level{
-  width: 70%;
-}
-
-.progress-bar{
-  background: linear-gradient(to right top, #65dfc9, #65dfc9);
-  width: 100%;
-  height: 25%;
-  border-radius: 1rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.progress-bar::after{
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: rgb(236, 236, 236);
-  position: absolute;
-  left: 50%;
-}
-
-.percent{
-  font-weight: bold;
-  background: rgb(to right top, #65dfc9, #65dfc9);
-  -webkit-background-clip: text;
-  /*-webkit-text-fill-color: transparent;*/
-}
-
-.skill + .skill{
-  margin-top: 0.6rem;
-}
-
   

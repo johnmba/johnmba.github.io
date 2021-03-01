@@ -8,16 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="src/styles/generalStyle.css">
+    <link rel="stylesheet" href="src/styles/portfolio.css">
     <link rel="stylesheet" href="src/styles/mediaCss.css">
-    <link rel="stylesheet" href="src/styles/animation.css">
   </head>
 
   <body>
-      <!--<input type="checkbox" id="menu_btn" />
-      [if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
-
+    <!--<input type="checkbox" id="menu_btn" />
+    [if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <input type="radio" id="research" name="rsch" checked>
+    <input type="radio" id="tutorial" name="ttl">
+    <input type="radio" id="views" name="vws">
     <input type="radio" id="item1" name="spot" checked>
     <input type="radio" id="item2" name="spot">
     <input type="radio" id="item3" name="spot">
@@ -31,17 +34,14 @@
           <div class="menu-item">
             <a href="/pages/abt.html">About</a>
           </div>
-          <div class="menu-item">
-            <a href="/pages/contact.html">Blog</a>
-          </div> 
         </div>   
         
-        <div class="menu-wrapper">
+        <div class="menu-wrapper brand">
           <div class="menu-item">
             <a href="/pages/contact.html">Contact</a>
           </div>
-          <div id="brand">
-            <a href="#" class="">JOHN MBA</a>
+          <div id="brand-name">
+            <a href="#" class=""> <span>JOHN</span> <span>MBA</span> </a>
           </div>
         </div>
       </div>
@@ -49,352 +49,64 @@
 
     <main>
       <div id="pgBackground" class="portfolio-items-wrapper clearfix">
-        <div class="portfolio-item-wrapper">
-          <div class="background-img-ppt" style="background-image:url(build/images/workbench.jpg)"></div>
-          <div class="portfolio-item">
-            <div class="slider-wrapper">
-              <div class="slider _3sl-wt">
-                <div class="img-text-wrapper gradient-item">
-                    <div class="logo-wrapper">
-                      <img src="build/icons/quest-logo.png" alt="">
-                    </div>
-                    <div class="subtitle-text">
-                      I researched and drafted a business case.
-                    </div> 
-                </div> 
-                <div class="gradient-item article-text">
-                  <div class="content">
-                    you can email me if you a developer willing to work on this project.
-                  </div>
+        <div class="pix">
+          <img src="/build/images/mypixl.jpg" alt="john mba">
+        </div>
+        <div class="portfolio">
+          <div class="portfolio-menu">
+            <div class="menu-wrapper">
+              <label for="research">
+                <div class="menu-item">
+                  <a href="#">research</a>
                 </div>
-                <div class="gradient-item article-text">
-                  <div class="content">
-                    you can email me if you a developer willing to work on this project.
-                  </div>
+              </label>
+              <label for="ttl">
+                <div class="menu-item">
+                  <a href="/pages/abt.html">Tutorials</a>
                 </div>
-              </div>
-              <ul class="arrows">
-                <li>
-                  <label for="item1"></label>
-                </li>
-                <li>
-                  <label for="item2"></label>
-                </li>
-                <li>
-                  <label for="item3"></label>
-                </li>
-              </ul>
-              <ul class="dots">
-                <li>
-                  <label for="item1"></label>
-                </li>
-                <li>
-                  <label for="item2"></label>
-                </li>
-                <li>
-                  <label for="item3"></label>
-                </li>
-              </ul> 
+              </label>
+              <label for="vws">
+                <div class="menu-item">
+                  <a href="/pages/work.html">views</a>
+                </div>
+              </label>  
             </div>
           </div>
-        </div>
-
-        <div class="portfolio-item-wrapper">
-          <div class="background-img-ppt" style="background-image:url(build/images/coding.jpg)"></div>
-          <div class="portfolio-item">
-            <div class="slider-wrapper">
-              <div class="slider _3sl-wt">
-                <div class="img-text-wrapper gradient-item">
-                    <div class="logo-wrapper">
-                        <img src="build/icons/python-logo.jpeg" alt="">
-                    </div>
-                    <div class="subtitle-text">
-                      I researched on a topic and did a seminar presentation at university of nigeria nsukka in the department of Biochemistry in the year 2014.
-                    </div> 
-                </div>
-                
-                <div class="gradient-item article-text">
-                    <h2>contributing to a python library</h2>
-                    <div class="content">
-                        <p>
-                            
-                        </p>
-                    </div>
-                </div>
-                <div class="gradient-item article-text">
-                  <h2>automating python library contribution in GitHub</h2>
-                  <div class="content">
-                      <p>
-                          
-                      </p>
-                  </div>
-                </div>
-              </div>
-              <ul class="arrows">
-                <li>
-                  <label for="item1"></label>
-                </li>
-                <li>
-                  <label for="item2"></label>
-                </li>
-                <li>
-                  <label for="item3"></label>
-                </li>
-              </ul>
-              <ul class="dots">
-                <li>
-                  <label for="item1"></label>
-                </li>
-                <li>
-                  <label for="item2"></label>
-                </li>
-                <li>
-                  <label for="item3"></label>
-                </li>
-              </ul>
-            </div>
+          <div class="info">
+            <h2> At A Glance</h2>
+            <p>
+              I am a certified biochemist as a graduate and a certified UK project management professional(P.M.P.) as well as Health and Safety Executive(H.S.E.) as a postgraduate. Skillfully I am professional website developer with strong desire for knowledge, hence improve and advancing on  my skill with every opportunity.
+            </p>
           </div>
-        </div>
-
-        <div class="portfolio-item-wrapper">
-          <div class="background-img-ppt" style="background-image:url(build/images/tutorial.jpg)"></div>
-          <div class="portfolio-item">
-            <div class="slider-wrapper">
-              <div class="slider _3sl-wt">
-                <div class="img-text-wrapper gradient-item">
-                    <div class="logo-wrapper">
-                        <img src="" alt="Johnmba tutorials">
-                    </div>
-                    <div class="subtitle-text">
-                        I researched and drafted a business case.
-                    </div> 
+          <div class="slider-wrapper">
+            <div class="rsch">
+              <div class="slider">
+                <div class="gradient-item">
+                  <h2>phytochemical analysis of different commercial teabags</h2>
+                  <p>
+                    so many studies have shown that tea has health benefits associated with obesity, cancer and cardiovascular diseases and neurological diseases which are world leading trends of diseases. Research have shown that phytochemicals present in tea is the bedrock of tea's health benefits which have been suggested to function through multifunctional target, antioxidant property, metal chelating as well as inhibition activity.
+                  </p>
+                  <p>
+                    In this present study, the level of the presence of these phytochemicals(alkaloids, tannings, flavonoids, glycosides, cyanogenic glycosides and lignin) are compared in six different commercial teabags(Loyd, Top tea, Lipton, Dilma, Freshpark and Five Roses) using preliminary phytochemical screening method and statistical analysis using one-way ANOVA at alpha(P &lt 0.05) level of significance and pearson correlation(R)(*. Correlation is significant at the 0.05 level(2-tailed). And **. Correlation is significant at the 0.01 level(2-tailed)).
+                  </p>
+                  <p>
+                    However, in conclusion all the different teabags label are positively inter-related though the strength of their relationship differs with one another. However, there is difference in the level of the presence of phytochemicals present among the teabags with Loyd having the highest level of tannings and cyanogenic glycosides, Loyd, Freshpark, and Five Roses has the highest level of alkaloids, Top tea has the highest level of flavonoids, Freshpark has the highest level of glycosides, and Lipton having the highest level of lignin, Loyd subsequently having  the highest level of total phytochemicals
+                  </p>
                 </div>
-                
-                <div class="gradient-item article-text">
-                    <h2>Gene Therapy principles, prospects and problems</h2>
-                    <div class="content">
-                        <p>
-                            
-                        </p>
-                    </div>
-                </div>
-                <div class="gradient-item article-text">
-                  <div class="content">
-                    if you are interested in the full work you can read it here
-                  </div>
-                </div>
-              </div>
-              <ul class="arrows">
-                <li>
-                  <label for="item1"></label>
-                </li>
-                <li>
-                  <label for="item2"></label>
-                </li>
-                <li>
-                  <label for="item3"></label>
-                </li>
-              </ul>
-              <ul class="dots">
-                <li>
-                  <label for="item1"></label>
-                </li>
-                <li>
-                  <label for="item2"></label>
-                </li>
-                <li>
-                  <label for="item3"></label>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item-wrapper">
-          <div class="background-img-ppt" style="background-image:url(build/images/dualboot.jpg)"></div>
-          <div class="portfolio-item">
-            <div class="slider-wrapper">
-              <div class="slider _3sl-wt">
-                <div class="img-text-wrapper gradient-item">
-                    <div class="logo-wrapper" style="display: flex;">
-                        <img src="build/icons/ms-logo.png" alt="">
-                        <img src="build/icons/arch-logo.png" alt="">
-                    </div>
-                    <div class="subtitle-text">
-                      I researched on a topic and did a seminar presentation at university of nigeria nsukka in the department of Biochemistry in the year 2014.
-                    </div> 
-                </div>    
-                <div class="gradient-item article-text">
-                    <h2>Gene Therapy principles, prospects and problems</h2>
-                    <div class="content">
-                        <p>
-                            
-                        </p>
-                    </div>
-                </div>
-                <div class="gradient-item article-text">
-                  <div class="content">
-                    if you are interested in the full work you can read it here
-                  </div>
-                </div>
-              </div>
-              <ul class="arrows">
-                <li>
-                  <label for="item1"></label>
-                </li>
-                <li>
-                  <label for="item2"></label>
-                </li>
-                <li>
-                  <label for="item3"></label>
-                </li>
-              </ul>
-              <ul class="dots">
-                  <li>
-                    <label for="item1"></label>
-                  </li>
-                  <li>
-                    <label for="item2"></label>
-                  </li>
-                  <li>
-                    <label for="item3"></label>
-                  </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item-wrapper">
-          <div class="background-img-ppt" style="background-image:url(build/images/pmp.jpg)"></div>
-          <div class="portfolio-item">
-            <div class="slider-wrapper">
-              <div class="slider _3sl-wt">
-                <div class="img-text-wrapper gradient-item">
-                    <div class="logo-wrapper">
-                        <img src="build/icons/pmi-logo.png" alt="">
-                    </div>
-                    <div class="subtitle-text">
-                        I researched and drafted a business case.
-                    </div> 
-                </div> 
-                <div class="gradient-item article-text">
-                    <h2>Gene Therapy principles, prospects and problems</h2>
-                    <div class="content">
-                        <p>
-                          
-                        </p>
-                    </div>
-                </div>
-                <div class="gradient-item article-text">
-                  <div class="content">
-                    if you are interested in the full work you can read it here
-                  </div>
-                </div>
-              </div>
-              <ul class="arrows">
-                <li>
-                  <label for="item1"></label>
-                </li>
-                <li>
-                  <label for="item2"></label>
-                </li>
-                <li>
-                  <label for="item3"></label>
-                </li>
-              </ul>
-              <ul class="dots">
-                <li>
-                  <label for="item1"></label>
-                </li>
-                <li>
-                  <label for="item2"></label>
-                </li>
-                <li>
-                  <label for="item3"></label>
-                </li>
-              </ul> 
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item-wrapper">
-          <div class="background-img-ppt" style="background-image:url(build/images/dna.webp)"></div>
-          <div class="portfolio-item">
-            <div class="slider-wrapper">
-              <div class="slider _3sl-wt">
-                <div class="img-text-wrapper gradient-item">
-                  <div class="logo-wrapper">
-                    <img src="build/icons/hse-logo.jpeg" alt="">
-                  </div>
-                  <div class="subtitle-text">
-                    I researched on a topic and did a seminar presentation at university of nigeria nsukka in the department of Biochemistry in the year 2014.
-                  </div> 
-                </div>
-                <div class="gradient-item article-text">
+                <div class="gradient-item">
                   <h2>Gene Therapy principles, prospects and problems</h2>
-                  <div class="content">
-                    <p>
-                          
-                    </p>
-                  </div>
+                  <p> 
+                    Mutations causes alteration in genes which is the cause of in-born diseases in children and adults and some severe diseases occurring today are associated with genes. Many diseases are generally determined example. Huntinton’s diseases and cystic fibrosis (CF) others are influenced by genes (Sade., 1998). However, according to World Health Organisation all monogenic diseases at birth is approximately 10/1000 (1996) and according to townsend cardio vascular diseases kills over 16,000 individuals every year (2014). However, the recent scientific developments make it possible for medicine to target such genetically related diseases at the molecular level (Sade., 1998).
+                  </p>
+                  <p>
+                    Gene Therapy could be by harnessing the therapeutic potentials of gene silencing RNA interference (Yang et al., 2014); the addition of gene; by killing of the disease cells using cytoreductive gene or by the suppression of the body’s immune response (Khushboo et al., 2014). However, these could be achieved either by manipulation at gamete cells known as germ line gene therapy which can be inherited by offspring or by somatic gene therapy which its modification is restricted to individual patient and cannot be inherited (Khushboo et al., 2014). However, gene therapy can be done in vivo or Ex Vivo by the use of delivery molecule called vectors. The vectors could either be viral or non viral vectors. Viral vectors are very efficient in gene delivery and their expression as well (Marie et al., 2008). The immune system in the administration route is an important factor in the safe delivery and expression of genes.
+                  </p>
+                  <p>
+                    However, viral vectors are less immunogenic than non-viral vectors (Te-lang et al., 2008) despite being limited in number of genes transported or delivered. Hence researchers are focusing on the use of non-viral vectors which are artificially synthesised like polyplexes and lipoplexes (Marie et al., 2008). Moreover the best candidates for gene therapy are monogenic diseases followed by important clinical results that have been obtained in multiple monogenic diseases such as severe combined immunodefieincies and haemophira B (Pol., 2013). However, Researcher must overcome many technical challenges before gene therapy will be a practical approach to treating diseases and as well the ethical issues which raises the questions, how can “good” and “bad” uses of gene therapy be distinguished? (Bethesda; 2014). Meanwhile, there are many other issues with gene therapy such as clinical safety and efficacy, Regulations and commercialization.
+                  </p>
                 </div>
-                <div class="gradient-item article-text">
-                  <div class="content">
-                    if you are interested in the full work you can read it here
-                  </div>
-                </div>
-              </div>
-              <ul class="arrows">
-                <li>
-                  <label for="item1"></label>
-                </li>
-                <li>
-                  <label for="item2"></label>
-                </li>
-                <li>
-                  <label for="item3"></label>
-                </li>
-              </ul>
-              <ul class="dots">
-                <li>
-                  <label for="item1"></label>
-                </li>
-                <li>
-                  <label for="item2"></label>
-                </li>
-                <li>
-                  <label for="item3"></label>
-                </li>
-              </ul> 
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item-wrapper">
-          <div class="background-img-ppt" style="background-image:url(build/images/test-tube.jpg)"></div>
-          <div class="portfolio-item">
-            <div class="slider-wrapper">
-              <div class="slider _3sl-wt">
-                <div class="img-text-wrapper gradient-item">
-                    <div class="logo-wrapper">
-                        <img src="build/icons/unn-logo.png" alt="">
-                    </div>
-                    <div class="subtitle-text">
-                        I did a project research work at university of nigeria nsukka in the department of Biochemistry in the year 2015.
-                    </div> 
-                </div>  
-                <div class="gradient-item article-text">
-                    <h2>phytochemical analysis of different commercial teabags</h2>
-                    <div class="content">
-                      <p>
-                        so many studies have shown that tea has health benefits associated with obesity, cancer and cardiovascular diseases and neurological diseases which are world leading trends of diseases. Research have shown that phytochemicals present in tea is the bedrock of tea's health benefits which have been suggested to function through multifunctional target, antioxidant property, metal chelating as well as inhibition activity. In this present study, the level of the presence of these phytochemicals(alkaloids, tannings, flavonoids, glycosides, cyanogenic glycosides and lignin) are compared in six different commercial teabags(Loyd, Top tea, Lipton, Dilma, Freshpark and Five Roses) using preliminary phytochemical screening method and statistical analysis using one-way ANOVA at alpha(P &lt 0.05) level of significance and pearson correlation(R)(*. Correlation is significant at the 0.05 level(2-tailed). And **. Correlation is significant at the 0.01 level(2-tailed)). However, in conclusion all the different teabags label are positively inter-related though the strength of their relationship differs with one another. However, there is difference in the level of the presence of phytochemicals present among the teabags with Loyd having the highest level of tannings and cyanogenic glycosides, Loyd, Freshpark, and Five Roses has the highest level of alkaloids, Top tea has the highest level of flavonoids, Freshpark has the highest level of glycosides, and Lipton having the highest level of lignin, Loyd subsequently having  the highest level of total phytochemicals
-                      </p>
-                    </div>
-                </div>
-                <div class="gradient-item article-text">
-                  <div class="content">
-                    if you are interested in the full work you can read it here
-                  </div>
+                <div class="gradient-item">
+                  Loading...
                 </div>
               </div>
               <ul class="arrows">
@@ -420,35 +132,21 @@
                 </li>
               </ul>  
             </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item-wrapper">
-          <div class="background-img-ppt" style="background-image:url(build/images/dna.webp)"></div>
-          <div class="portfolio-item">
-            <div class="slider-wrapper">
-              <div class="slider _3sl-wt">
-                <div class="img-text-wrapper gradient-item">
-                    <div class="logo-wrapper">
-                        <img src="build/icons/unn-logo.png" alt="">
-                    </div>
-                    <div class="subtitle-text">
-                        I researched on a topic and did a seminar presentation at university of nigeria nsukka in the department of Biochemistry in the year 2014.
-                    </div> 
+            
+            <div class="ttl">
+              <div class="slider">
+                <div class="gradient-item">
+                  <h2>Hi thanks for visiting my site.</h2>
+                  <p> almost a decade of development experience in number of industries, i realized that the typical product creation process between clients and developers was flawed. All too often developers rarely communicate to clients throughout the development stage, resulting in final product that fails to reach the goal sought by the customer end user.</p>
+                  <p>
+                    For this reason i decided to utilize a completely different development pattern that focuses on highly focused communication and transparent design patterns. when I take on project not only do I work to craft the application according to client's goals. the end result is the right product, delivered on time and on budget.
+                  </p>
                 </div>
-                
-                <div class="gradient-item article-text">
-                    <h2>Gene Therapy principles, prospects and problems</h2>
-                    <div class="content">
-                        <p>
-                            
-                        </p>
-                    </div>
+                <div class="gradient-item">
+                  Loading...
                 </div>
-                <div class="gradient-item article-text">
-                  <div class="content">
-                    if you are interested in the full work you can read it here
-                  </div>
+                <div class="gradient-item">
+                  Loading...
                 </div>
               </div>
               <ul class="arrows">
@@ -472,9 +170,45 @@
                 <li>
                   <label for="item3"></label>
                 </li>
-              </ul>
+              </ul>  
             </div>
-          </div>
+
+            <div class="rsch">
+              <div class="slider">
+                <div class="gradient-item">
+                  Loading...
+                </div>
+                <div class="gradient-item">
+                  Loading...
+                </div>
+                <div class="gradient-item">
+                  Loading...
+                </div>
+              </div>
+              <ul class="arrows">
+                <li>
+                  <label for="item1"></label>
+                </li>
+                <li>
+                  <label for="item2"></label>
+                </li>
+                <li>
+                  <label for="item3"></label>
+                </li>
+              </ul>
+              <ul class="dots">
+                <li>
+                  <label for="item1"></label>
+                </li>
+                <li>
+                  <label for="item2"></label>
+                </li>
+                <li>
+                  <label for="item3"></label>
+                </li>
+              </ul>  
+            </div> 
+          </div> 
         </div>
       </div>
     </main>     

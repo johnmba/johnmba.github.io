@@ -1,7 +1,45 @@
   
-  @media print, screen and (max-width: 520px){
+  @media print, screen and (max-width: 1100px){
+    #pgBackground{  
+      padding: 2rem;
+      margin: 5rem 2rem;
+    }
+    
+    .pix img{
+      width: 25rem;
+      height: 25rem;
+      border-radius: 50%;
+    }
+  }
+
+  @media print, screen and (max-width: 900px){
+    #pgBackground{  
+      padding: 2rem 1rem;
+      margin: 5rem 0.5rem;
+    }
+    
+    .pix img{
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+    }
+  }
+  
+  @media print, screen and (max-width: 600px){
     .pgHeader{
       padding: 30px 10px;
+      margin: 0;
+      position: relative;
+    }
+
+    #brand-name{
+      right: 0;
+    }
+
+    .pix img{
+      width: 100%;
+      height: 50%;
+      border-radius: 0;
     }
 
     #home-margin{
@@ -12,9 +50,13 @@
       margin-right: 10px;
     }
 
-    .gradient{
-      max-width: 85%;
-      max-height: 70%;
+    
+    .profile-wrapper .gradient-item {
+      padding: 10px;
+    }
+
+    .profile-wrapper{
+      overflow-y: scroll;
     }
 
     .img-background{
@@ -22,15 +64,25 @@
     }
 
     #pgBackground{
+      padding: 0;
+      margin: 0;
       display: block;
       width: 100vw;
       height: 90vh;
     }
-
     .prof-img{
       display: none;
     }
   }
+
+  @media print, screen and (max-width: 420px){
+    .pix img{
+      width: 100%;
+      height: 50%;
+    }
+
+  }
+  
   
   @media print{
     body{
