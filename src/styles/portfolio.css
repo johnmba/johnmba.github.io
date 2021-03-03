@@ -19,21 +19,19 @@
   align-items: center;
   justify-content: center;
 }
-.menu-wrapper label{
-  padding: 1rem;
-  padding-bottom: 0.5rem;
-}
+
 .info h2{
   padding-top: 0;
   margin: 0;
 }
 
+#item1, #item2, #item3{
+  display: none;
+}
+
 .slider-wrapper, .info{
   overflow: hidden;
-  padding: 1rem
-}
-.slider-wrapper{
-  display: none;
+  padding: 1rem;
 }
 
 /* PORTFOLIO
@@ -83,6 +81,15 @@
   .article-text{
     padding: 10px;
   }
+
+  .portfolio-item{
+    display: none;
+  }
+
+  .slider-wrapper{
+    position: relative;
+  }
+  
   
   
   /* PORTFOLIO
