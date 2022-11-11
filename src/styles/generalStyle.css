@@ -1,35 +1,116 @@
+
+body, .container__fluid{
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: rgba(204, 204, 204, 0.397) none repeat scroll 0 0;
+  font-size: 16px;
+  text-align: left;
+  line-height: 22px;
+  height: 100vh;
+  overflow: hidden;
+}
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Lato, sans-serif, Times, serif;
+  -ms-overflow-style: none;
+  scrollbar-color: transparent transparent;  /*thumb and track color 
+  scrollbar-width: 0px;*/
 }
 
-body > input[type="radio"] {
-  display: none;
+*::-webkit-scrollbar {
+  width: 0;
 }
 
-h2{
-  margin: 10px 0;
-  padding: 5px;
-  color: rgb(0, 128, 0);
+*::-webkit-scrollbar-track {
+  background: transparent;
 }
 
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+a{
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
 ul{
   list-style: none
 }
-
-#pgBackground{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p{
+  padding: 10px;
+}
+strong, h1, h2{
+  margin: 10px 0;
+  padding: 5px;
+  color: #2ecc71;
+}
+.__80Hgt{
+  height: 80%;
+}
+.rel__postn{
+  position: relative;
+}
+.inherit__Hgt{
+  height: inherit;
+}
+.bgMt{
+  margin-top: 70px;
+}
+._10padTp{
+  padding-top: 10px;
+}
+.sm__pad{
+  padding: 5px;
+}
+.float__left{
+  float: left;
+}
+.clearfix{
+  content: "";
+  clear: both;
+}
+.skil-icon img{
+  width: 50px;
+  height: 50px;
+}
+.cards{
+  display: inline-block;
+  background: linear-gradient(to right bottom, 
+  rgba(255, 255, 255, 0.6),
+  rgba(225, 225, 255, 0.3)
+  );
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-top: 30px;
+}
+.cards p{
+  padding-left: 0;
+}
+.card{
+  background: white;
+  margin: 10px;
+  margin-left: 0px;
+  padding: 10px;
+  padding-right: 0px;
+  border-radius: 2rem;
+  z-index: 2;
 }
 
-.hidden{
+.portfolio-item, .hidden{
   display: none;
   opacity: 0;
   transition: all 0.5s;
 }
-
 .unhidden{
   display: block;
   width: 100%;
@@ -37,31 +118,36 @@ ul{
   transition: all 0.5s;
 }
 
-._10pad{
-  padding: 10px;
-}
 
 /* NAV HEADER
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
+  .header-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 70px;
+    z-index: 997;
+  }
 .pgHeader{
-  padding: 30px;
-  margin: 0 5rem;
   display: flex;
   justify-content: space-between;
   align-content: center;
+  transition: all 0.5s;
+  background: rgba(13, 51, 24, 0.9);
 }
-
 .menu-wrapper{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5rem;
 }
-
 #brand-name{
   margin: 3px;
 }
-
 #brand-name a{
-  color: green;
+  color: #2ecc71;
   text-decoration: none;
   transition: color 0.5s;
 }
@@ -69,8 +155,7 @@ ul{
   margin-right: 55px;
 }
 #brand-name{
-  position: absolute;
-  top: 15px;
+  background-color: #2ecc71;
   right: 2rem;
   height: 50px;
   width: 50px;
@@ -78,52 +163,60 @@ ul{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid green;
+  border: 1px solid #2ecc71;
 }
 #brand-name > a{
+  color: #fff;
   margin-top: 3px;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .menu-wrapper > div {
   margin-right: 20px;
   font-size: 0.9em;
   text-transform: uppercase;
 }
-
 #home-margin{
   margin-right: 50px;
 }
-
 .menu-item{
   height: 22px;
-  margin-top: 3px;
   border-bottom: 1px solid transparent;
   transition: border-bottom 0.5s;
 }
-
 .menu-item a{
-  color: #8a8a8a;
+  color: #fff;
   text-decoration: none;
   transition: color 0.5s;
 }
-
-.menu-item:hover{
-  border-bottom: 1px solid black;
-}
-
 .menu-item a:hover{
-  color: black;
+  border-bottom: 1px solid #8a8a8a;
+  color: #8a8a8a;
+  transition: all 0.3s ease 30ms;
 }
-
-.active-link{
-  border-bottom: 1px solid black;
-}
-
 .active-link a{
-  color: black !important;
+  color: #8a8a8a !important;
 }
-  
+
+/* MAIN BODY
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  #pgBackground{
+    height: 100vh;
+  }
+  .full__width{
+    width: 100%;
+  }
+  .halve__width{
+    width: 50%;
+  }
+  .container{
+    height: inherit;
+    overflow: scroll;
+    padding: 1rem 5rem;
+    margin: 1rem 5rem;
+  }
+  ._100VH{
+    height: 100vh;
+  }

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../../django projects/jtech"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "johnmba.github.io",
+		"liveServer.settings.port": 5501
+	}
+}

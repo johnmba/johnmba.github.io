@@ -1,0 +1,169 @@
+
+.portfolio-items-wrapper{
+  position: relative;
+}
+.portfolio{
+  height: 90%;
+  padding-left: 1rem;
+  position: absolute;
+  top: 70px;
+  overflow: scroll;
+  padding-left: 1rem;
+}
+.info{
+  max-height: 65%;
+  overflow: scroll;
+}
+.slider-wrapper{
+  position: relative;
+  height: 70%;
+  overflow: hidden;
+  padding: 1rem;
+  color: #fff;
+  border-radius: 40px 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
+  border-top: 3px solid #f1f1f1;
+}
+body, main, section, aside, article, header{
+  display: block;
+}
+.background__animation{
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  -webkit-animation-name: background;
+  animation-name: background;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+}
+
+@keyframes background {
+  0% {
+    background-image: url(/build/images/workbench.jpg);
+  }
+  100% {
+    background-image: url(/build/images/DNA_strand.jpg);
+  }
+}
+@-webkit-keyframes background {
+  0% {
+    background-image: url(/build/images/workbench.jpg);
+  }
+  100% {
+    background-image: url(/build/images/DNA_strand.jpg);
+  }
+}
+#pgBackground{ 
+  padding: 1rem;
+}
+.pix{
+  width: inherit;
+  padding: 1.5rem;
+}
+.pix > img {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+}
+.portfolio-menu .menu-wrapper{
+  padding: 1.5rem;
+  padding-bottom: 1.0rem;
+  margin-bottom: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-menu .menu-wrapper a{
+  color: #2ecc71;
+}
+.portfolio-menu .menu-wrapper a:hover{
+  color: #fff;
+}
+#item1, #item2, #item3{
+  display: none;
+}
+.tab__block, .info, .quote{
+  padding: 1rem;
+  color: #fff;
+  border-radius: 40px 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
+  border: 3px solid #f1f1f1;
+}
+
+/* PORTFOLIO
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .carousel__item{
+    position: relative;
+  }
+  .read__more{
+    z-index: 999;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor:pointer;
+    border:none;
+    padding: 0 5px;
+    font-size:20px;
+    background:linear-gradient(141deg, #a1bebc 0%, #8b999b 51%, #40535a 75%);
+    color:white;
+    font-family:cursive;
+    box-sizing:border-box;
+  }
+  
+  .quote{
+    position:relative;
+    margin: 20px;
+  }
+
+  .portfolio > .quote{
+    margin: 0;
+  }
+
+  .quote:before{
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    height: 37px;
+    width: 40px;
+    box-shadow: 0 30px 0 0 inherit inset;
+    border-bottom-left-radius: 50%;
+    border-bottom: 2px solid #f1f1f1;
+  }
+  .quote:after{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    height: 50px;
+    width: 0px;
+    box-shadow: 0 0 0 0  inset;
+    border-bottom-left-radius: 50%;
+    border-left: 2px solid #f1f1f1;
+  }
+
+  
+/* PORTFOLIO
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+    
+    .quote:after{
+    content: "";
+    position:absolute;
+    top:-40px;
+    left:0;
+    height:40px;
+    width: 40px;
+    border: 2px solid #f1f1f1;
+    border-bottom-right-radius: 50%;
+  }
+    
+    background:#000;
+  */

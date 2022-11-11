@@ -1,0 +1,112 @@
+
+/* ABOUT PAGE
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .profile-wrapper, #pgBackground .prof-img{
+    height: inherit;
+  }
+  .profile-wrapper{
+    position: relative;
+  }
+  .carousel{
+    
+    height: 100%;
+  }
+
+  .prof-img img{
+    width: 100%;
+    height: 100%;
+  }  
+  .img-background{
+    background-image: url(/build/images/beach.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .profile-wrapper .carousel{
+    background: white;
+    background: linear-gradient(to right bottom, 
+    rgba(255, 255, 255, 0.6),
+    rgba(225, 225, 255, 0.3)
+    );
+    border-radius: 2rem;
+    z-index: 2;
+  }
+
+  
+  .profile-wrapper .gradient-item:nth-child(3){
+    padding-top: 0px;
+  }
+  .cert-item{
+    position: relative;
+    padding-left: 25px;
+  }
+  .cert-item + .cert-item{
+    margin-top: 15px;
+  }
+  .cert-item::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent #fff;
+    border-width: 5px 0 5px 12px;
+    transform: translateY(-50%);
+}
+.skill{
+  display: flex;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 1rem;
+  padding: 0.5rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  justify-content: space-between;
+}
+.skill-level{
+  width: 70%;
+}
+.progress-bar{
+  background: linear-gradient(to right top, #65dfc9, #65dfc9);
+  width: 100%;
+  height: 25%;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.progress-bar::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgb(236, 236, 236);
+  position: absolute;
+  left: 50%;
+}
+.percent{
+  font-weight: bold;
+  background: rgb(to right top, #65dfc9, #65dfc9);
+  -webkit-background-clip: text;
+  /*-webkit-text-fill-color: transparent;*/
+}
+.skill + .skill{
+  margin-top: 0.6rem;
+}
+
+
+/* PORTFOLIO
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.logo-wrapper img{
+  width: 100px;
+}
+.background-img-ppt{
+  background-position:  center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
