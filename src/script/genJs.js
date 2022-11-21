@@ -43,6 +43,25 @@ for (let item = 0; item < portfolioMenus.length; item++) {
     }
   })
 }
+function paragrapher(full_text) {
+  const splited_text = full_text.split("/^(\w{80, 100})$\s/^[A-Z]/")
+  const paragraph = (paragraph_text)=>{
+    return "<p>" + paragraph_text + "</p>"
+  }
+  return splited_text.map(paragraph)
+}
+function itrate_into_dom_array(json__data) {
+  const child_div = (each_data)=>{
+    if (each_data.quote) {
+      return `<div class="quote">${each_data.quote}<span class="read__more"><a href="#">... ${each_data.phil}</a></span></div>`
+    } else {
+      return`<div class="">
+        <a href="/pages/base.html?id=3"><h2>${each_data.topic}</h2></a>
+        ${paragrapher(each_data.body)}</div>`
+    }
+  }
+  return json__data.map(child_div)
+}
 
 const tutorials__div = document.querySelector('#tutorials')
 const views__div = document.querySelector('#views')
@@ -50,14 +69,30 @@ const view__more = document.querySelectorAll('.view__more')
 fetch('/src/json/data.json')
   .then((response) => response.json())
   .then((json) => view__more.forEach(element => {// will raise not a function error if used on non iteration data
-    console.log(element.parentElement.id)
     element.addEventListener('click', ()=>{
       if (element.parentElement.id==="views") {
-        `<div class=""></div>`
+        const views = itrate_into_dom_array(json.views)
+        //use for iteration to insert generated views
+        for (let view = 0; view < views.length; view++) {
+          const container = document.createElement("div")
+          container.innerHTML = views[view];
+          element.parentElement.firstElementChild.insertBefore(
+            container, element.parentElement.firstElementChild.lastChild
+          );
+        }
+        return
+        //element.parentElement.append(itrate_into_dom_array(json.views))
       } else if (element.parentElement.id==="tutorials"){
-        `<div class="">
-        <a href="/pages/base.html?id=3"><h2></h2></a>
-        <p></p></div>`
+        const tutorials = itrate_into_dom_array(json.tutorials)
+        console.log(tutorials)
+        for (let tutorial = 0; tutorial < tutorials.length; tutorial++) {
+          const container = document.createElement("div")
+          container.innerHTML = tutorials[tutorial];
+          element.parentElement.firstElementChild.insertBefore(
+            container, element.parentElement.firstElementChild.lastChild
+          );
+        }
+        return
       }else{
         alert("undefined variable")
       }

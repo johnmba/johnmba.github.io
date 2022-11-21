@@ -6,6 +6,10 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robot" content="index">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
 
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/src/styles/generalStyle.css">
@@ -38,14 +42,31 @@
     <div id="pgBackground" class="bgMt">
         <noscript>Please this page can't load properly withoth javascript</noscript>
         <div class="container">
-            <h2>Gene Therapy principles, prospects and problems</h2>
+            <h1>Gene Therapy principles, prospects and problems</h1>
         </div>
     </div>
 </body>
 <script>
-    fetch('./data.json')
+    const desc = document.getElementsByTagName("meta")
+    const header = document.getElementsByTagName("h1")
+    function paragrapher(full_text) {
+        const splited_text = full_text.split("/^\w{80, 100}+$.+/s/^[A-Z]/")
+        const paragraph = (paragraph_text)=>{
+            return "<p>" + paragraph_text + "</p>"
+        }
+        return splited_text.map(paragraph)
+    }
+    console.log(response)
+    fetch('../src/json/data.json')
     .then((response) => response.json())
-    .then((json) => console.log(json));
-
+    .then((json) => json.tutorials)
+    //for can't be used were argument expresssion is expected but foreach can
+    //for iteration can't be used as a function argument
+    .then((contents) => contents.forEach(content => {
+        if(content.id === Request.arguments.id){
+            titl = content.titl
+        }
+    })
+    );
 </script>
 </html>
