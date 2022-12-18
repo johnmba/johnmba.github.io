@@ -5,10 +5,86 @@ const info = document.querySelector('.info')
 const quote = document.querySelector('.quote')
 const slide = document.querySelector('.slider-wrapper')
 
-//info.addEventListener('click', ()=>{ 
-  //console.log(item)
-  //info.classList.remove('hidden')
-//})
+
+function paragrapher(full_text) {
+  //(^(\w{80,100})\s^[A-Z]$)?/  ([.?!])\s*(?=[A-Z]
+  const splited_text = full_text.split(/\s/)
+  var index = 0
+  let joined_txt = splited_text.slice(0, 100)
+  if(splited_text[-1] && index < 100){
+    joined_txt = full_text
+  }
+  return "<p>" + joined_txt.join(" ") + "</p>"
+}
+
+
+function getDate(date_string) {
+  let [_, day, month, year] = /(\d{1,2})-(\d{1,2})-(\d{1,4})/.exec(date_string)
+  return new Date(year, month - 1, day).toDateString()
+}
+
+function load_menu_data(menu, json_data) {
+
+  const tutorials__div = document.querySelector('#tutorials div')
+  const views__div = document.querySelector('#views div')
+  const more__btn = document.querySelector(menu + " .view__more")
+  index =+ Number(more__btn.value)
+  end_iter = index + 5
+
+  if(menu==="#tutorials"){
+    while (index <= end_iter) {
+      const wrapper = document.createElement("div")
+      if(json_data.tutorials[index] === undefined){
+        more__btn.remove
+        break
+      }else if(index===end_iter){
+        more__btn.value= index
+      }
+      const tutorial = json_data.tutorials[index]
+      const art_date = getDate(tutorial.date)
+      wrapper.innerHTML = `<h2 class="_10padTp"><a href="/pages/base.html?id=3">${tutorial.topic}</a>
+        <div><small>${art_date}</small></div></h2>
+        <div>${paragrapher(tutorial.body)}</div>`
+      wrapper.className = "_10padTp"
+      tutorials__div.appendChild(wrapper);
+      index++
+    }
+    return
+
+  }else if(menu==="#views"){
+    while (index <= end_iter) {
+      const wrapper = document.createElement("div")
+      if(json_data.views[index] === undefined){
+        more__btn.remove
+        break
+      }else if(index===end_iter){
+        more__btn.value = index
+        console.log(more__btn)
+      }
+      const view = json_data.views[index]
+      wrapper.innerHTML = `<div>${view.quote}<span class="read__more">
+      <a href="#">&nbsp;... ${view.phils}</a></span></div>
+      <div class="_10padTp">
+        <span class="fb-share-button read__more grad__bkground" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="large">
+          <a rel="noopener" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+        </span>
+        <span class="read__more grad__bkground">
+          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </span>
+        <span class="read__more grad__bkground">
+          <a href="https://api.whatsapp.com/send?phone=2348035935789&text=${view.quote}"><img src="" alt="whatsapp"></a>
+        </span>
+      </div>`
+      wrapper.className = "quote"
+      views__div.appendChild(wrapper);
+      index++
+    }
+    return
+  }else{
+    alert("undefined variable")
+  }
+}
+
 
 let lastEvent = ""
 
@@ -26,7 +102,6 @@ for (let item = 0; item < portfolioMenus.length; item++) {
       portfolioItemClick = document.querySelectorAll(portfolioItemId)
       portfolioItemClick[0].classList.remove('portfolio-item')
       lastEvent = portfolioItemClick[0]
-      return
     }
 
     if (active === "" && lastEvent === "" && portfolioItemClick === "") {
@@ -37,66 +112,24 @@ for (let item = 0; item < portfolioMenus.length; item++) {
       portfolioItemClick[0].classList.remove('portfolio-item')
       active = portfolioItemId
       lastEvent = portfolioItemClick[0]
-      return
     }else if (active === portfolioItemClick[0]){
       return
     }
+
+  // the incoporation of fetched data into the DOM
+    fetch('/src/json/data.json')
+    .then((response) => response.json())
+    .then((json) => {
+      load_menu_data(portfolioItemId, json)
+      document.querySelector(portfolioItemId + ' .view__more').addEventListener("click", (event) => {
+        console.log(event.target)
+        load_menu_data(portfolioItemId, json)
+      })
+      //const prev_state = document.querySelectorAll('.view__more')
+    })
   })
 }
-function paragrapher(full_text) {
-  const splited_text = full_text.split("/^(\w{80, 100})$\s/^[A-Z]/")
-  const paragraph = (paragraph_text)=>{
-    return "<p>" + paragraph_text + "</p>"
-  }
-  return splited_text.map(paragraph)
-}
-function itrate_into_dom_array(json__data) {
-  const child_div = (each_data)=>{
-    if (each_data.quote) {
-      return `<div class="quote">${each_data.quote}<span class="read__more"><a href="#">... ${each_data.phil}</a></span></div>`
-    } else {
-      return`<div class="">
-        <a href="/pages/base.html?id=3"><h2>${each_data.topic}</h2></a>
-        ${paragrapher(each_data.body)}</div>`
-    }
-  }
-  return json__data.map(child_div)
-}
 
-const tutorials__div = document.querySelector('#tutorials')
-const views__div = document.querySelector('#views')
-const view__more = document.querySelectorAll('.view__more')
-fetch('/src/json/data.json')
-  .then((response) => response.json())
-  .then((json) => view__more.forEach(element => {// will raise not a function error if used on non iteration data
-    element.addEventListener('click', ()=>{
-      if (element.parentElement.id==="views") {
-        const views = itrate_into_dom_array(json.views)
-        //use for iteration to insert generated views
-        for (let view = 0; view < views.length; view++) {
-          const container = document.createElement("div")
-          container.innerHTML = views[view];
-          element.parentElement.firstElementChild.insertBefore(
-            container, element.parentElement.firstElementChild.lastChild
-          );
-        }
-        return
-        //element.parentElement.append(itrate_into_dom_array(json.views))
-      } else if (element.parentElement.id==="tutorials"){
-        const tutorials = itrate_into_dom_array(json.tutorials)
-        console.log(tutorials)
-        for (let tutorial = 0; tutorial < tutorials.length; tutorial++) {
-          const container = document.createElement("div")
-          container.innerHTML = tutorials[tutorial];
-          element.parentElement.firstElementChild.insertBefore(
-            container, element.parentElement.firstElementChild.lastChild
-          );
-        }
-        return
-      }else{
-        alert("undefined variable")
-      }
-    })
-  }));
+// forEach will raise not a conditionfunction error if used on non iteration data
 // path error in relative file directry because the file might not be relatve when linked in html page
 // to avoide such error you have to use fullpath directory

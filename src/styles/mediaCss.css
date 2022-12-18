@@ -1,5 +1,9 @@
   
   @media print, screen and (max-width: 1080px){
+    .container{
+      padding: 1rem 1rem;
+      margin: 1rem 1rem;
+    }
     .pix img{
       width: 25rem;
       height: 25rem;
@@ -43,6 +47,10 @@
     }
     .profile-wrapper{
       overflow-y: scroll;
+    }
+    .container{
+      padding: 1rem 0rem;
+      margin: 1rem 0rem;
     }
 
     .img-background{
@@ -88,6 +96,7 @@
     .portfolio {
       height: inherit;
       overflow: scroll;
+    }
   }
 
   @media print, screen and (max-height: 320px){

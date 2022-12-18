@@ -7,9 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robot" content="index">
-    <meta name="author" content="">
+    <meta name="author" content="john mba">
     <meta name="keywords" content="">
     <meta name="description" content="">
+
+    <!--Social media using open graph og-->
+    <meta name="og:title" content="White Tuto">
+    <meta name="og:description" content="Get to know more about John Nwanja Mba who have defied allodds for the love of code and creativity be it genetity or algorithm">
+    <meta name="og:url" content="https://johnmba.github.io/">
+    <meta name="og:site_name" content="John mba portfolio">
+    <meta name="og:image" content="https://johnmba.github.io/build/images/mypixl.jpg">
+
+    <!--Twitter implementation of meta tags-->
+    <meta name="twitter:title" content="White Tuto">
+    <meta name="twitter:description" content="Click to know more about John Nwanja Mba who have defied all odds for the love of code and creativity be it genetity or algorithm">
+    <meta name="twitter:image" content="https://johnmba.github.io/build/images/mypixl.jpg">
+    <meta name="twitter:site" content="https://johnmba.github.io">
+    <meta name="twitter:creator" content="@nwanjamba">
+
+    <!-- Alternative Social media using schema tags-->
+    <meta itemprop="name" content="White Label SEO Services">
+    <html itemscope itemtype="https://johnmba.github.io/base.htm">
+    <meta itemprop="description" content="Want to know more about John Nwanja Mba who have defied all odds for the love of codes and creativity be it genetity or algorithm">
+    <meta itemprop="image" content="https://johnmba.github.io/build/images/mypixl.jpg">
 
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/src/styles/generalStyle.css">
@@ -17,6 +37,8 @@
     <title>My Seminar</title>
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="jbcy3APA"></script>
     <header>
         <div id="pgHeader" class="pgHeader header-bg" role="navigation">                                 
             <div class="menu-wrapper">
@@ -39,34 +61,120 @@
         </div>
     </header>
 
-    <div id="pgBackground" class="bgMt">
+    <div id="pgBackground" class="bgMt rel__postn">
         <noscript>Please this page can't load properly withoth javascript</noscript>
-        <div class="container">
-            <h1>Gene Therapy principles, prospects and problems</h1>
-        </div>
+        <main>
+            <div class="container">
+                <article>
+                    <header>Gene Therapy principles, prospects and problems</header>
+                    <section>
+                        <div class="darticle"></div>
+                    </section>
+                    <form action="#" method="post">
+                        <div class="input__wrapa">
+                            <div><label for="name">Name</label></div>
+                            <input type="text" name="name" tabindex="0" title="your name" required placeholder="Enter full name">
+                        </div>
+                        <div class="input__wrapa">
+                            <div><label for="email">Email</label></div>
+                            <input type="email" name="email" id="emel" tabindex="1" title="your Email" required placeholder="Enter your Email addreee">
+                        </div>
+                        <div class="input__wrapa">
+                            <div><label for="coment">Comment</label></div>
+                            <textarea name="coment" id="cmnt" cols="30" rows="5" tabindex="2" title="your opinion" required placeholder="Write your comment here"></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </article>
+                <aside class="abs__postn center__v">
+                    <div class="sticky__postn">
+                        <div class="soc__icon">
+                            <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+                            <script type="IN/Share" data-url="https://www.linkedin.com"></script>
+                        </div>
+                        <div class="fb-share-button soc__icon" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="large">
+                            <a rel="noopener" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                        </div>
+                        <div class="soc__icon">
+                            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                        <span class="read__more soc__icon">
+                            <a href="https://api.whatsapp.com/send?phone=2348035935789&text=${view.quote}">
+                                <div class="clearfix grad__bkground">
+                                    <div class="skil-icon float__left">
+                                        <img src="/build/icons/whatsapp.png" alt="whatsapp me">
+                                    </div>
+                                    <div class="float__left sm__pad">Share</div>
+                                </div>
+                            </a>
+                        </span>
+                    </div>
+                </aside>
+            </div>
+        </main>
     </div>
 </body>
 <script>
-    const desc = document.getElementsByTagName("meta")
+    //url assignment
+    document.querySelector('meta[name="og:url"]').content = document.querySelector('meta[itemprop="name"]').content = 
+    document.querySelector("html[itemscope]").content =  window.location.href
+
+    const og_ttl = document.querySelector('meta[name="og:title"]')
+    const og_desc = document.querySelector('meta[name="og:description"]')
+    const og_img = document.querySelector('meta[name="og:image"]')
+
+    const twitter_ttl  = document.querySelector('meta[name="twitter:title"]')
+    const twitter_desc = document.querySelector('meta[name="twitter:description"]')
+    const twiter_img  = document.querySelector('meta[name="twitter:image"]')
+
+    const schema_ttl  = document.querySelector('meta[itemprop="name"]')
+    const schema_desc = document.querySelector('meta[itemprop="description"]')
+    const schema_img  = document.querySelector('meta[itemprop="image"]')
+
     const header = document.getElementsByTagName("h1")
-    function paragrapher(full_text) {
-        const splited_text = full_text.split("/^\w{80, 100}+$.+/s/^[A-Z]/")
-        const paragraph = (paragraph_text)=>{
-            return "<p>" + paragraph_text + "</p>"
+    const id = window.location.href.slice(41) - 1
+    
+    function paragraphs(full_text, container, start=0, end=null) {
+        const paragraph = document.createElement("p")
+        const splited_text = full_text.split(/\s/)
+        if(!end){
+            end =+ 200
         }
-        return splited_text.map(paragraph)
+        let para_array = splited_text.slice(start, end)
+        let para = para_array.join(" ")
+        
+        if(splited_text.slice(start, -1).length > 200){
+            paragraph.innerText = splited_text.slice(start, -1).join(" ")
+            container.appendChild(paragraph)
+            return
+        }else if (para.endsWith(".")){
+            paragraph.innerText = para
+            container.appendChild(paragraph)
+        }else{
+            const next_slice = splited_text.slice(end)
+            for (let index = 0; index < next_slice.length; index++) {
+                const end_word = splited_text[index];
+                para_array.push(end_word)
+                if(end_word.endsWith(".")){
+                    end = indexOf(end_word)
+                    paragraph.innerText = para_array.join(" ")
+                    container.appendChild(paragraph)
+                }
+            }
+        }
+        paragraphs(full_text, end)
     }
-    console.log(response)
+    
     fetch('../src/json/data.json')
     .then((response) => response.json())
     .then((json) => json.tutorials)
     //for can't be used were argument expresssion is expected but foreach can
     //for iteration can't be used as a function argument
-    .then((contents) => contents.forEach(content => {
-        if(content.id === Request.arguments.id){
-            titl = content.titl
-        }
-    })
-    );
+    .then((contents) => {if(contents[id].id = id){
+        document.querySelector('meta[name="og:title"]').content = document.querySelector('meta[name="twitter:title"]').content=
+        document.querySelector('meta[itemprop="name"]').content = document.title = contents[id].topic
+        document.querySelector("article header").innerText = contents[id].topic
+        paragraphs(contents[id].body, document.querySelector(".darticle"))
+    }})
 </script>
 </html>

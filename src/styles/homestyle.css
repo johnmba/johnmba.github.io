@@ -90,11 +90,11 @@ body, main, section, aside, article, header{
   display: none;
 }
 .tab__block, .info, .quote{
-  padding: 1rem;
+  padding: 5px 5px 5px 1rem;
   color: #fff;
   border-radius: 40px 10px;
   background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
-  border: 3px solid #f1f1f1;
+  border: 1px solid #f1f1f1;
 }
 
 /* PORTFOLIO
@@ -110,10 +110,12 @@ body, main, section, aside, article, header{
     user-select:none;
     cursor:pointer;
     border:none;
-    padding: 0 5px;
+    padding: 2px 5px;
+    padding-top: 5px;
+    padding-left: 12px;
     font-size:20px;
-    background:linear-gradient(141deg, #a1bebc 0%, #8b999b 51%, #40535a 75%);
-    color:white;
+    word-break: keep-all;
+    color:#8a8a9b;
     font-family:cursive;
     box-sizing:border-box;
   }

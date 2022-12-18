@@ -4,7 +4,7 @@ body, .container__fluid{
   background: rgba(204, 204, 204, 0.397) none repeat scroll 0 0;
   font-size: 16px;
   text-align: left;
-  line-height: 22px;
+  line-height: 18px;
   height: 100vh;
   overflow: hidden;
 }
@@ -47,18 +47,75 @@ ol, li {
   padding: 0;
 }
 p{
-  padding: 10px;
+  padding: 5px;
+  line-height: 22px;
+  letter-spacing: normal;
+  word-spacing: normal;
+  font-size: 1.2em;
 }
 strong, h1, h2{
-  margin: 10px 0;
   padding: 5px;
   color: #2ecc71;
+  width: inherit;
+}
+form{
+  padding: 10px;
+  margin: 20px 5px;
+}
+.input__wrapa{
+  margin-bottom: 20px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+input, textarea{
+  width: 100%;
+  padding: 10px;
+}
+input{
+  height: 40px;
+}
+form >button{
+  margin-bottom: 50px;
+  width: 30%;
+  padding: 8px;
+  color: #2ecc71;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: larger;
+}
+.soc__icon{
+  margin-top: 5px;
+  padding: 5px 5px;
+}
+.grad__bkground{
+  background:linear-gradient(141deg, #a1bebc 0%, #8b999b 51%, #40535a 75%);
+}
+div > small{
+  font-size: medium;
+  color: #8a8a9b;
+  text-align: left;
+}
+#pgBackground>header, article>header, h1>a, h2>a{
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+}
+h2 > a{
+  max-width: 90%;
+  color: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .__80Hgt{
   height: 80%;
 }
 .rel__postn{
   position: relative;
+}
+.abs__postn{
+  position: absolute;
 }
 .inherit__Hgt{
   height: inherit;
@@ -82,6 +139,15 @@ strong, h1, h2{
 .skil-icon img{
   width: 50px;
   height: 50px;
+}
+.sticky__postn{
+  position: sticky;
+  font-weight: bolder;
+}
+.center__v{
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .cards{
   display: inline-block;
@@ -119,10 +185,14 @@ strong, h1, h2{
 }
 .view__more{
   margin-left: 50%;
-  padding: 10px;
-  font-size: small;
-  color: #8a8a8a;
+  transform: translateX(-50%);
+  font-smooth: antialised;
+  -webkit-font-smoothing: antialised;
+  -moz-osz-font-smoothng: grayscale;
+  font-size: medium;
+  color: #8a8a9b;
   cursor: pointer;
+  word-break: keep-all;
 }
 
 /* NAV HEADER
@@ -211,17 +281,23 @@ strong, h1, h2{
   #pgBackground{
     height: 100vh;
   }
+  #pgBackground main{
+    height: inherit;
+  }
   .full__width{
     width: 100%;
   }
   .halve__width{
     width: 50%;
   }
+  #pgBackground > .container{
+    margin-bottom: 20px;
+  }
   .container{
     height: inherit;
     overflow: scroll;
-    padding: 1rem 5rem;
-    margin: 1rem 5rem;
+    padding: 1rem 3rem;
+    margin: 1rem 3rem;
   }
   ._100VH{
     height: 100vh;
