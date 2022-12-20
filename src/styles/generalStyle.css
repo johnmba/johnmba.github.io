@@ -16,6 +16,7 @@ body, .container__fluid{
   -ms-overflow-style: none;
   scrollbar-color: transparent transparent;  /*thumb and track color 
   scrollbar-width: 0px;*/
+  text-rendering: optimizeLegibility;
 }
 
 *::-webkit-scrollbar {
@@ -51,7 +52,8 @@ p{
   line-height: 22px;
   letter-spacing: normal;
   word-spacing: normal;
-  font-size: 1.2em;
+  font-size: 1.15em;
+  font: 1em/1.5 'Public Sans', sans-serif;
 }
 strong, h1, h2{
   padding: 5px;
@@ -61,6 +63,14 @@ strong, h1, h2{
 form{
   padding: 10px;
   margin: 20px 5px;
+}
+form>.note{
+  text-align: center;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #068a3d;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 .input__wrapa{
   margin-bottom: 20px;
@@ -83,6 +93,9 @@ form >button{
   transform: translateX(-50%);
   font-weight: bold;
   font-size: larger;
+}
+#moto, .italisize{
+  font: italic 0.6em/1.2em  'Public Sans', sans-serif;
 }
 .soc__icon{
   margin-top: 5px;
@@ -190,7 +203,7 @@ h2 > a{
   -webkit-font-smoothing: antialised;
   -moz-osz-font-smoothng: grayscale;
   font-size: medium;
-  color: #8a8a9b;
+  color: #068a3d;
   cursor: pointer;
   word-break: keep-all;
 }

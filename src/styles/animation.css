@@ -1,6 +1,26 @@
 
 /*Carousel Slide.....................................................................*/
 
+.slide__wrapper {
+  width: 300%;
+  display: flex;
+  -webkit-animation: slide__port 18s ease infinite;
+  animation: slide__port 18s ease infinite;
+}
+.slide__port{
+  float: left;
+  height: 100%;
+  width: inherit;
+}
+@keyframes slide__port {
+  20% {margin-left: 0px;}
+  40% {margin-left: -100%;}
+  60% {margin-left: -100%;}
+  70% {margin-left: -200%;}
+  90% {margin-left: -200%;}
+}
+
+
 @keyframes tonext {
   75% {
     left: 0;
@@ -222,7 +242,10 @@
 
 .animate-charcter-color
 {
+  font: 0.8em/1.3em  'Public Sans', sans-serif;
+  letter-spacing: 0.125em;
   text-transform: uppercase;
+  text-shadow: #0003;
   background-image: linear-gradient(
     -225deg,
     #231557 0%,
@@ -232,14 +255,13 @@
   );
   background-size: auto auto;
   background-clip: border-box;
-  background-size: 200% auto;
+  background-size: 150% auto;
   color: #fff;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 20s linear infinite;
   display: inline-block;
-  font-size: 14px;
 }
 @keyframes textclip {
   to {

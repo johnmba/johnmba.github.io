@@ -38,7 +38,7 @@
 </head>
 <body>
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="jbcy3APA"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="vv2qPf9K"></script>
     <header>
         <div id="pgHeader" class="pgHeader header-bg" role="navigation">                                 
             <div class="menu-wrapper">
@@ -70,7 +70,9 @@
                     <section>
                         <div class="darticle"></div>
                     </section>
+                    <section><div id="coments"></div></section>
                     <form action="#" method="post">
+                        <div class="note">Use the form below to share your view or ask questions.</div>
                         <div class="input__wrapa">
                             <div><label for="name">Name</label></div>
                             <input type="text" name="name" tabindex="0" title="your name" required placeholder="Enter full name">
@@ -81,7 +83,7 @@
                         </div>
                         <div class="input__wrapa">
                             <div><label for="coment">Comment</label></div>
-                            <textarea name="coment" id="cmnt" cols="30" rows="5" tabindex="2" title="your opinion" required placeholder="Write your comment here"></textarea>
+                            <textarea name="coment" id="cmnt" cols="30" rows="10" tabindex="2" title="your opinion" required placeholder="Write your comment here"></textarea>
                         </div>
                         <button type="submit">Submit</button>
                     </form>
@@ -92,8 +94,8 @@
                             <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
                             <script type="IN/Share" data-url="https://www.linkedin.com"></script>
                         </div>
-                        <div class="fb-share-button soc__icon" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="large">
-                            <a rel="noopener" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                        <div class="fb-share-button" data-href="https://johnmba.github.io" data-layout="button" data-size="large">
+                            <a rel="noopener" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjohnmba.github.io%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
                         </div>
                         <div class="soc__icon">
                             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -135,34 +137,42 @@
     const id = window.location.href.slice(41) - 1
     
     function paragraphs(full_text, container, start=0, end=null) {
+        
+        if (!full_text.split(/\s/)) {
+            return
+        }else if(!end){
+            end = start + 150
+        }
+
         const paragraph = document.createElement("p")
         const splited_text = full_text.split(/\s/)
-        if(!end){
-            end =+ 200
-        }
-        let para_array = splited_text.slice(start, end)
-        let para = para_array.join(" ")
         
-        if(splited_text.slice(start, -1).length > 200){
-            paragraph.innerText = splited_text.slice(start, -1).join(" ")
+        if(splited_text.slice(start, splited_text.length).length < 200){
+            paragraph.innerText = splited_text.slice(start, splited_text.length).join(" ")
             container.appendChild(paragraph)
+            console.log(splited_text.slice(start, splited_text.length))
             return
-        }else if (para.endsWith(".")){
+        }else {
+            var para_array = splited_text.slice(start, end)
+            var para = para_array.join(" ")
+        }
+        if(para.endsWith(".")){
             paragraph.innerText = para
             container.appendChild(paragraph)
-        }else{
+        }else if(! para.endsWith(".")){
             const next_slice = splited_text.slice(end)
             for (let index = 0; index < next_slice.length; index++) {
-                const end_word = splited_text[index];
+                const end_word = next_slice[index];
                 para_array.push(end_word)
                 if(end_word.endsWith(".")){
-                    end = indexOf(end_word)
                     paragraph.innerText = para_array.join(" ")
+                    end +=index
                     container.appendChild(paragraph)
+                    break
                 }
             }
         }
-        paragraphs(full_text, end)
+        paragraphs(full_text, container, end+1)
     }
     
     fetch('../src/json/data.json')

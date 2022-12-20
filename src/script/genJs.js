@@ -66,13 +66,13 @@ function load_menu_data(menu, json_data) {
       <a href="#">&nbsp;... ${view.phils}</a></span></div>
       <div class="_10padTp">
         <span class="fb-share-button read__more grad__bkground" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="large">
-          <a rel="noopener" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+          <a rel="noopener" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Facebook</a>
         </span>
         <span class="read__more grad__bkground">
-          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Twitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </span>
         <span class="read__more grad__bkground">
-          <a href="https://api.whatsapp.com/send?phone=2348035935789&text=${view.quote}"><img src="" alt="whatsapp"></a>
+          <a href="https://api.whatsapp.com/send?phone=2348035935789&text=${view.quote}">Whatsapp</a>
         </span>
       </div>`
       wrapper.className = "quote"

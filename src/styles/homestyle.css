@@ -124,11 +124,11 @@ body, main, section, aside, article, header{
     position:relative;
     margin: 20px;
   }
-
   .portfolio > .quote{
     margin: 0;
+    background-color: wheat;
+    opacity: 0.8;
   }
-
   .quote:before{
     content: "";
     position: absolute;
