@@ -126,10 +126,11 @@ div > small{
 #pgBackground>header, article>header, h1>a, h2>a{
   text-align: center;
   font-weight: bold;
-  font-size: larger;
 }
 h2 > a{
-  max-width: 90%;
+  display: block;
+  max-width: 100%;
+  line-height: 1;
   color: inherit;
   white-space: nowrap;
   overflow: hidden;
@@ -219,7 +220,6 @@ h2 > a{
 .view__more{
   margin-left: 50%;
   transform: translateX(-50%);
-  font-smooth: antialised;
   -webkit-font-smoothing: antialised;
   -moz-osz-font-smoothng: grayscale;
   font-size: medium;

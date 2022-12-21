@@ -147,7 +147,10 @@
     document.querySelector("html[itemscope]").content=document.querySelector("script[data-url]")["data-url"]=
     document.querySelector("div[data-href]")["data-href"]=window.location.href
 
-    const id = window.location.href.slice(41)
+    var id = window.location.href.slice(41)
+    if (id.split(":")){
+        id = id.split(":")[0]
+    }
     
     function paragraphs(full_text, container, start=0, end=null) {
         
