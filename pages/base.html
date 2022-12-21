@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>My Seminar</title>
     <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robot" content="index">
     <meta name="author" content="john mba">
@@ -12,9 +12,9 @@
     <meta name="description" content="">
 
     <!--Social media using open graph og-->
-    <meta name="og:title" content="White Tuto">
+    <meta name="og:title" content="">
     <meta name="og:description" content="Get to know more about John Nwanja Mba who have defied allodds for the love of code and creativity be it genetity or algorithm">
-    <meta name="og:url" content="https://johnmba.github.io/">
+    <meta name="og:url" content="">
     <meta name="og:site_name" content="John mba portfolio">
     <meta name="og:image" content="https://johnmba.github.io/build/images/mypixl.jpg">
 
@@ -22,7 +22,7 @@
     <meta name="twitter:title" content="White Tuto">
     <meta name="twitter:description" content="Click to know more about John Nwanja Mba who have defied all odds for the love of code and creativity be it genetity or algorithm">
     <meta name="twitter:image" content="https://johnmba.github.io/build/images/mypixl.jpg">
-    <meta name="twitter:site" content="https://johnmba.github.io">
+    <meta name="twitter:site" content="">
     <meta name="twitter:creator" content="@nwanjamba">
 
     <!-- Alternative Social media using schema tags-->
@@ -34,11 +34,11 @@
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/src/styles/generalStyle.css">
     <link rel="stylesheet" href="/src/styles/mediaCss.css">
-    <title>My Seminar</title>
 </head>
 <body>
     <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="vv2qPf9K"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="vv2qPf9K"></script>
+
     <header>
         <div id="pgHeader" class="pgHeader header-bg" role="navigation">                                 
             <div class="menu-wrapper">
@@ -90,51 +90,64 @@
                 </article>
                 <aside class="abs__postn center__v">
                     <div class="sticky__postn">
-                        <div class="soc__icon">
+                        <div class="mTop">
                             <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-                            <script type="IN/Share" data-url="https://www.linkedin.com"></script>
+                            <script type="IN/Share" data-url="https://johnmba.github.io/base.html"></script>
                         </div>
-                        <div class="fb-share-button" data-href="https://johnmba.github.io" data-layout="button" data-size="large">
-                            <a rel="noopener" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjohnmba.github.io%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                        <div class="mTop">
+                            <div class="fb-share-button" data-href="" data-layout="button" data-size="small">
+                                <a rel="noopener" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjohnmba.github.io%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                            </div>
                         </div>
-                        <div class="soc__icon">
+                        <div class="mTop">
                             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </div>
-                        <span class="read__more soc__icon">
-                            <a href="https://api.whatsapp.com/send?phone=2348035935789&text=${view.quote}">
+                        <span class="mTop">
+                            <a rel="noopener" class="grad__bkground" href="https://api.whatsapp.com/send?text=${view.quote}"  data-action="share/whatsapp/share" target="_blank">
                                 <div class="clearfix grad__bkground">
-                                    <div class="skil-icon float__left">
+                                    <div class="soc__icon float__left grad__bkground">
                                         <img src="/build/icons/whatsapp.png" alt="whatsapp me">
                                     </div>
-                                    <div class="float__left sm__pad">Share</div>
+                                    <div class="float__left sm__pad grad__bkground">Share</div>
                                 </div>
                             </a>
                         </span>
                     </div>
                 </aside>
+                <div class="dm">
+                    <div class="sticky__postn">
+                        <div class="clearfix dflex">
+                            <div class="soc__icon float__left">
+                                <img src="/build/icons/message-icon.png" alt="E-mail me">
+                            </div>
+                            <a rel="noopener" href="mailto:Johndbrave@gmail.com" target="_blank">
+                                <div class="float__left"><span>Send an E-mail</span>
+                                    <div><small>Johndbrave@gmail.com</small></div>
+                                </div>
+                            </a>
+                        </div>
+    
+                        <div class="clearfix">
+                            <div class="soc__icon float__left">
+                                <img src="/build/icons/whatsapp.png" alt="whatsapp me">
+                            </div>
+                            <a href="https://api.whatsapp.com/send?phone=2348035935789&text='I visited your portfolio website and I am interested'">
+                                whatsapp message
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
 </body>
 <script>
     //url assignment
-    document.querySelector('meta[name="og:url"]').content = document.querySelector('meta[itemprop="name"]').content = 
-    document.querySelector("html[itemscope]").content =  window.location.href
+    document.querySelector('meta[name="og:url"]').content=document.querySelector('meta[itemprop="name"]').content = 
+    document.querySelector("html[itemscope]").content=document.querySelector("script[data-url]")["data-url"]=
+    document.querySelector("div[data-href]")["data-href"]=window.location.href
 
-    const og_ttl = document.querySelector('meta[name="og:title"]')
-    const og_desc = document.querySelector('meta[name="og:description"]')
-    const og_img = document.querySelector('meta[name="og:image"]')
-
-    const twitter_ttl  = document.querySelector('meta[name="twitter:title"]')
-    const twitter_desc = document.querySelector('meta[name="twitter:description"]')
-    const twiter_img  = document.querySelector('meta[name="twitter:image"]')
-
-    const schema_ttl  = document.querySelector('meta[itemprop="name"]')
-    const schema_desc = document.querySelector('meta[itemprop="description"]')
-    const schema_img  = document.querySelector('meta[itemprop="image"]')
-
-    const header = document.getElementsByTagName("h1")
-    const id = window.location.href.slice(41) - 1
+    const id = window.location.href.slice(41)
     
     function paragraphs(full_text, container, start=0, end=null) {
         
@@ -150,7 +163,6 @@
         if(splited_text.slice(start, splited_text.length).length < 200){
             paragraph.innerText = splited_text.slice(start, splited_text.length).join(" ")
             container.appendChild(paragraph)
-            console.log(splited_text.slice(start, splited_text.length))
             return
         }else {
             var para_array = splited_text.slice(start, end)
@@ -181,10 +193,68 @@
     //for can't be used were argument expresssion is expected but foreach can
     //for iteration can't be used as a function argument
     .then((contents) => {if(contents[id].id = id){
-        document.querySelector('meta[name="og:title"]').content = document.querySelector('meta[name="twitter:title"]').content=
-        document.querySelector('meta[itemprop="name"]').content = document.title = contents[id].topic
-        document.querySelector("article header").innerText = contents[id].topic
-        paragraphs(contents[id].body, document.querySelector(".darticle"))
+        /*http://www.facebook.com/share.php?u=hubspot.com
+        To create your own Facebook share links, replace the hugspot.com section of the URL, below, with 
+        the URL of the content you want to promote. Then link the full URL to the anchor text you 
+        want to appear in your content
+        */
+        
+        document.querySelector('meta[name="og:title"]').content=document.querySelector('meta[name="twitter:title"]').content=
+        document.querySelector('meta[itemprop="name"]').content=document.title = contents[id].topic
+        document.querySelector("article header").innerText=contents[id].topic;
+        if (contents[id].body.summary) {
+            desc = contents[id].body.summary.slice(0, 180)
+        } else {
+            desc = contents[id].body.slice(0, 180)
+        }
+        document.querySelector('meta[name="og:description"]').content=document.querySelector('meta[name="twitter:description"]').content=
+        document.querySelector('meta[itemprop="description"]').content=desc
+        if (contents[id].image) {
+            document.querySelector('meta[name="og:image"]').content=document.querySelector('meta[name="twitter:image"]').content=
+            document.querySelector('meta[itemprop="image"]')=contents[id].image
+        }
+        const article = document.querySelector(".darticle");
+        if (typeof contents[id].body==="object") {
+            if (contents[id].body.summary) {
+                const para = document.createElement("p")
+                para.innerText=contents[id].body.summary
+                article.appendChild(para)
+                delete contents[id].body.summary
+            }
+            //limitations: of lor loop works on array because it uses index while foreach loop works on both array and object
+            Object.entries(contents[id].body).forEach(([topic, paragraph])=>{
+                const headline = document.createElement("h1");
+                headline.innerText = topic;
+                article.appendChild(headline)
+                if (typeof paragraph==="object") {
+                    for (let index = 0; index < paragraph.length; index++) {
+                        const item = paragraph[index];
+                        console.log(item)
+                        if (typeof item==="object") {
+                            console.log(item)
+                            const list = document.createElement("ul")
+                            for (let index = 0; index < item.length; index++) {
+                                const element = item[index];
+                                const li = document.createElement("li");
+                                li.innerText=element
+                                list.appendChild(li)
+                            }
+                            article.appendChild(list)
+                        } else {
+                            let para = document.createElement("p")
+                            para.innerText = item
+                            article.appendChild(para)
+                        }
+                    }
+                } else {
+                    let para = document.createElement("p")
+                    para.innerText = paragraph
+                    article.appendChild(para)
+                }
+            })
+        } else {
+            paragraphs(contents[id].body, article)
+        }
     }})
 </script>
 </html>

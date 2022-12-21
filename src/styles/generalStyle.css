@@ -1,5 +1,5 @@
 
-body, .container__fluid{
+.container__fluid{
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background: rgba(204, 204, 204, 0.397) none repeat scroll 0 0;
   font-size: 16px;
@@ -73,6 +73,7 @@ form>.note{
   margin-bottom: 15px;
 }
 .input__wrapa{
+  width: 90%;
   margin-bottom: 20px;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -97,12 +98,25 @@ form >button{
 #moto, .italisize{
   font: italic 0.6em/1.2em  'Public Sans', sans-serif;
 }
-.soc__icon{
-  margin-top: 5px;
-  padding: 5px 5px;
-}
 .grad__bkground{
   background:linear-gradient(141deg, #a1bebc 0%, #8b999b 51%, #40535a 75%);
+}
+.dm{
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  right: 5px;
+  bottom: 50px;
+  border-radius: 25px;
+  width: 200px;
+}
+.dm a{
+  color: #fff;
+}
+.soc__icon{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 10px;
 }
 div > small{
   font-size: medium;
@@ -142,8 +156,14 @@ h2 > a{
 .sm__pad{
   padding: 5px;
 }
+.mTop{
+  margin-top: 5px;
+}
 .float__left{
   float: left;
+}
+.dflex{
+  display: inline-flex;
 }
 .clearfix{
   content: "";
@@ -307,10 +327,10 @@ h2 > a{
     margin-bottom: 20px;
   }
   .container{
+    max-width: 800px;
     height: inherit;
     overflow: scroll;
-    padding: 1rem 3rem;
-    margin: 1rem 3rem;
+    margin-left: 4rem;
   }
   ._100VH{
     height: 100vh;

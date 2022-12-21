@@ -8,6 +8,9 @@ const slide = document.querySelector('.slider-wrapper')
 
 function paragrapher(full_text) {
   //(^(\w{80,100})\s^[A-Z]$)?/  ([.?!])\s*(?=[A-Z]
+  if (full_text.summary) {
+    return "<p>"+full_text.summary+"</p>"
+  }
   const splited_text = full_text.split(/\s/)
   var index = 0
   let joined_txt = splited_text.slice(0, 100)
@@ -42,8 +45,8 @@ function load_menu_data(menu, json_data) {
       }
       const tutorial = json_data.tutorials[index]
       const art_date = getDate(tutorial.date)
-      wrapper.innerHTML = `<h2 class="_10padTp"><a href="/pages/base.html?id=3">${tutorial.topic}</a>
-        <div><small>${art_date}</small></div></h2>
+      wrapper.innerHTML = `<h2 class="_10padTp"><a href="/pages/base.html?id=${index}">${tutorial.topic}</a>
+        <div><small>${tutorial.author+" "+art_date}</small></div></h2>
         <div>${paragrapher(tutorial.body)}</div>`
       wrapper.className = "_10padTp"
       tutorials__div.appendChild(wrapper);
@@ -65,14 +68,14 @@ function load_menu_data(menu, json_data) {
       wrapper.innerHTML = `<div>${view.quote}<span class="read__more">
       <a href="#">&nbsp;... ${view.phils}</a></span></div>
       <div class="_10padTp">
-        <span class="fb-share-button read__more grad__bkground" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="large">
-          <a rel="noopener" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Facebook</a>
+        <span class="fb-share-button read__more grad__bkground" data-href="https://johnmba.github.io" data-layout="button_count" data-size="large">
+        <a rel="noopener" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjohnmba.github.io%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
         </span>
         <span class="read__more grad__bkground">
-          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Twitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a rel="noopener" href="https://twitter.com/share?ref_src=twsrc%5Etfw" target="_blank" class="twitter-share-button" data-show-count="false">Twitter</a>
         </span>
         <span class="read__more grad__bkground">
-          <a href="https://api.whatsapp.com/send?phone=2348035935789&text=${view.quote}">Whatsapp</a>
+          <a rel="noopener" href="href="https://api.whatsapp.com/send?text=${view.quote}"  data-action="share/whatsapp/share" target="_blank">Whatsapp</a>
         </span>
       </div>`
       wrapper.className = "quote"
