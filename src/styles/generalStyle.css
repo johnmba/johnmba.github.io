@@ -13,9 +13,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  -ms-overflow-style: none;
-  scrollbar-color: transparent transparent;  /*thumb and track color 
-  scrollbar-width: 0px;*/
   text-rendering: optimizeLegibility;
 }
 

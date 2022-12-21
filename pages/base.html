@@ -147,7 +147,8 @@
     document.querySelector("html[itemscope]").content=document.querySelector("script[data-url]")["data-url"]=
     document.querySelector("div[data-href]")["data-href"]=window.location.href
 
-    var id = window.location.href.slice(41)
+    const addr = window.location.href
+    var id = addr.split("=")[1]
     if (id.split(":")){
         id = id.split(":")[0]
     }
